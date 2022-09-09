@@ -84,6 +84,7 @@ img{
 
 .animacion__titulo{
     display: block;
+    position: relative;
 	color: transparent;
 	animation: text_reveal 1s ease forwards;
 	animation-delay: 1.4s;
