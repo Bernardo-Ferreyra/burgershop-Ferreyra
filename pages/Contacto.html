@@ -14,6 +14,8 @@
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <!--Custom css-->
     <link rel="stylesheet" href="../styles/styles.css">
 
@@ -21,60 +23,140 @@
 </head>
 
 <body>
-    
-    <!--barra de navegacion-->
-    <header class="navegacion">
-        <a href="../index.html" class="navegacion__logo">
-            <img src="../img/logo1.webp" alt="logo">
-            <h1>La casita Azul</h1>
-        </a>
-        <nav class="navegacion__menu">
-            <ul class="navegacion__menu--links">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="Nosotros.html">Nosotros</a></li>
-                <li><a href="Menu.html">Menu</a></li>
-                <li><a href="Franquicias.html">Franquicias</a></li>
-                <li><a href="Contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- fin barra de navegacion-->
 
-    <!--formulario de contacto-->
+    <main class="container-fluid">
 
-    <main class="contacto__contenedor">
-        <h2 class="animacion__titulo">Contactanos<span></span></h2>
-        <section class="contacto__card">
-            <img src="../img/logo1.webp" alt="logo">
-            <form class="contacto__formulario">
-                <input id="nombre "type="text" placeholder="Nombre">
-                <input id="apellido" type="text" placeholder="Apellido">
-                <input id="mail" type="email" placeholder="Mail">
-                <textarea id="comentarios" placeholder="Ingresa tu comentario aqui"></textarea>
-                <p>Deseo recibir notificaciones <input type="checkbox" checked></p>
-                <input class="btn" type="button" value="Enviar">
-                <input class="btn" type="reset" value="Limpiar">
-            </form>
+        <!--barra de navegacion-->
+        <section class="row">
+            <section class="col p-0">
+                <nav class="navbar navbar-dark navbar-expand-md py-0">
+                    <a href="../index.html" class="navegacion__logo">
+                        <img src="../img/logo1.webp" alt="logo">
+                        <h1>La casita Azul</h1>
+                    </a>
+                    <button class="navbar-toggler custom-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse pe-md-5 pe-sm-0" id="navbarNav">
+                        <ul class="navbar-nav w-100 justify-content-end text-center gap-3 gap-sm-4 gap-md-5">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Nosotros.html">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Menu.html">Menu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Franquicias.html">Franquicias</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </section>
         </section>
-        <img class="contacto__imagen" src="../img/contacto1.svg" alt="imagen contacto">
-        
-    </main>
-    <!--fin formulario de contacto-->
 
-    <!--Footer-->
-    <footer class="footer">
-        <h3>Seguinos en nuestras redes sociales!</h3>
-        <ul class="footer__links">
-            <li><a href="https://www.instagram.com/lacasitaazulburgers/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            </li>
-            <li><a href="https://www.facebook.com/lacasitaazulburgers/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            </li>
-            <li><a href="https://api.whatsapp.com/send?phone=01166118060" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-            </li>
-        </ul>
-        <p><i class="fa-solid fa-copyright"></i> La casita azul , todos los derechos reservados</p>
+        <!-- fin barra de navegacion-->
+
+
+        <!-- Contacto -->
+        <section class="row align-items-center">
+            <section class="col contacto__imagen">
+                <div class="d-flex justify-content-center">
+                    <h2 class="d-inline-block m-5 p-5 text-center animacion__titulo">Contactanos<span></span></h2>
+                </div>
+
+                <section class="row m-3 m-sm-5 p-sm-5">
+                    <section class="col p-0 ">
         
-    </footer>
-    <!--fin Footer-->
+                    </section>
+                    <section class="col-12 col-md-6 p-5 contenedor__formulario">
+                            <img  class="logo__contacto"src="../img/logo1.webp" width="50px" alt="logo">
+        
+                        <form action="#">
+                            <div class="form-floating mt-5 mb-4">
+                                <input type="email" class="form-control" id="floatingInput" placeholder="ejemplo@ejemplo.com">
+                                <label for="floatingInput">Mail</label>
+                            </div>
+                            <div class="form-floating mb-4">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="Nombre">
+                                <label for="floatingInput">Nombre</label>
+                            </div>
+                            <div class="form-floating mb-4">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="Apellido">
+                                <label for="floatingInput">Apellido</label>
+                            </div>
+                            <div class="form-floating mb-4">
+                                <textarea class="form-control" placeholder="dejanos tu comentario" id="floatingTextarea" style="height: 100px"></textarea>
+                                <label for="floatingTextarea">Comentarios</label>
+                            </div>
+                            <div class="form-check form-switch mb-4">
+                                <input class="form-check-input" type="checkbox" id="formSwitchCheckChecked" checked>
+                                <label class="form-check-label" for="formSwitchCheckChecked">Deseo recibir notificaciones</label>
+                            </div>
+        
+                            <div class="d-grid gap-4 mb-4 w-75 mx-auto">
+                                <button class="btncustom contactobtn" type="button">Enviar</button>
+                                <button class="btncustom contactobtn" type="reset">Limpiar</button>
+                            </div>
+                        </form>
+                    </section>
+                </section>
+            </section>
+        </section>
+        <!-- fin Contacto -->
+
+
+        <!--Footer-->
+        <section class="row bg-dark py-2 align-items-center">
+            <section class="col-md-4 p-5">
+                <h3 class="footer__redes--texto text-center">Seguinos en nuestras redes sociales!</h3>
+                <ul class="footer__links mt-5 p-0 d-flex justify-content-evenly">
+                    <li>
+                        <a href="https://www.instagram.com/lacasitaazulburgers/" target="_blank">
+                            <i class="fa-brands fa-instagram "></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/lacasitaazulburgers/" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="col-md-4 py-5 px-4">
+                <h2 class="footer__titulo--logo text-center">La casita<span>Azul</span></h2>
+                <img class="footer__logo mx-auto d-block" src="../img/logo1.webp" alt="logo">
+            </section>
+            <section class="col-md-4 p-5 text-secondary text-center">
+                <ul class="footer__datos p-0">
+                    <li><i class="fa-solid fa-location-dot"></i> La casita azul - burgers</li>
+                    <li>Coghlan - CABA - Argentina</li>
+                    <li>lacasitaazulburgers@gmail.com</li>
+                    <li>+54 11 6621-8027</li>
+                </ul>
+            </section>
+        </section>
+        <section class="row align-items-center p-0 bg-black">
+            <section class="col text-center m-4">
+                <p class="text-secondary m-0"><i class="fa-solid fa-copyright"></i> La casita azul , todos los derechos reservados</p>
+            </section>
+        </section>
+
+        <!--fin Footer-->
+
+    </main>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>

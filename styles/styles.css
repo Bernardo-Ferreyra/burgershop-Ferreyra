@@ -64,7 +64,7 @@ img{
     align-items: center;
 }
 
-.btn{
+.btncustom{
     color:var(--alternative);
     border:none;
     display: flex;
@@ -78,8 +78,33 @@ img{
     transition: 0.3s ease-in-out;
 }
 
-.btn:hover{
+.btncustom:hover{
     transform: scale(1.2);
+}
+
+.card{
+    width: 23rem;
+    height: 33rem;
+    border-radius: var(--spacing-xsmall);
+    box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+.card img{
+    border-top-left-radius: var(--spacing-xsmall);
+    border-top-right-radius: var(--spacing-xsmall);
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.card-body h3{
+    font-size: var(--text-base);
+    font-weight: 600;
+}
+
+.card-body p{
+    font-size: var(--text-small);
 }
 
 .animacion__titulo{
@@ -164,6 +189,8 @@ nav{
 .custom-toggler .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
+
+
 /*FIN BARRA DE NAVEGACION*/
 
 
@@ -226,15 +253,18 @@ video {
     cursor: pointer;
     transition: 0.3s ease-in;
 }
+
 .main__enlaces a:hover{
     transform: scale(1.2);
     border-radius: 2rem;
 }
+
 .main__enlaces a p{
     color: var(--alternative);
     font-size: var(--text-base);
     margin-bottom: 0;
 }
+
 .main__nosotros{
     background: center url(../img/nosotros1.webp);
     background-size: cover;
@@ -277,31 +307,16 @@ video {
 }
 
 .nosotros__texto{
-    width: 100%;
-    padding-top: var(--spacing-medium);
     background-color:var(--secondary);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
 }
 
 .nosotros__texto p {
     font-size: var(--text-base);
-    text-align: center;
-    width: 80%;
 }
 
 .nosotros__texto h1 {
     font-size: var(--text-medium);
     font-weight: 600;
-    margin: 1rem auto;
-}
-
-.nosotros__texto h3 {
-    font-size: var(--text-medium);
-    font-weight: 600;
-    margin-bottom: 1rem;
 }
 
 .logo {
@@ -311,53 +326,24 @@ video {
     margin: var(--spacing-medium);
 }
 
-.nosotros__galeria{
-    width: 80%;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-auto-rows: 12rem;
-    gap: var(--spacing-xsmall);
-    margin-bottom: 5rem;
+.nosotros__texto h3 {
+    font-size: var(--text-medium);
+    font-weight: 600;
 }
 
-.nosotros__lacasita{
+.carousel-item{
     width: 100%;
+    height: 50vh;
+}
+
+.carousel-inner .carousel-item img {
     height: 100%;
-    object-fit: cover;
-    border-radius: 0.5rem;
-    transition: 0.3s ease-in-out;
+    object-fit:cover;
 }
 
-.nosotros__lacasita:hover{
-    transform: scale(1.2);
-}
-
-.nosotros__lacasita:nth-child(1){
-    grid-row: span 2;
-}
-.nosotros__lacasita:nth-child(2){
-    grid-column: span 2;
-}
-.nosotros__lacasita:nth-child(6){
-    grid-column: span 2;
-}
-.nosotros__lacasita:nth-child(7){
-    grid-column: span 3;
-}
-.nosotros__lacasita:nth-child(8){
-    grid-row: span 2;
-}
-.nosotros__lacasita:nth-child(9){
-    grid-column: span 2;
-}
-.nosotros__lacasita:nth-child(10){
-    grid-row: span 2;
-}
-.nosotros__lacasita:nth-child(16){
-    grid-row: span 2;
-}
-.nosotros__lacasita:nth-child(17){
-    grid-column: span 2;
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    height: 4rem;
+    width: 4rem;
 }
 
 .nosotros__banner2{
@@ -373,65 +359,7 @@ video {
 }
 
 .nosotros__info{
-    width: 100%;
     background-color: var(--secondary);
-    padding: var(--spacing-large) 0;
-}
-
-.nosotros__cards--container{
-    position: relative;
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    text-align: center;
-}
-
-.nosotros__card{
-    position: relative;
-    width: 20rem;
-    height: 30rem;
-    border-radius: 2rem;
-    margin: var(--spacing-medium);
-    background-color: var(--alternative);
-    box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.3);
-    text-align: center;
-}
-
-.nosotros__card--circle{
-    position: relative;
-    width: 100%;
-    height: 50%;
-    background-color: var(--secondary);
-    clip-path: circle(13rem at center 0);
-    text-align: center;
-}
-
-.nosotros__card--circle i {
-    color: var(--text-color);
-    font-size: var(--text-large);
-    padding-top: 4rem;
-}
-
-.nosotros__card--content{
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-}
-
-.nosotros__card--content h3{
-    font-size: var(--text-base);
-}
-
-.nosotros__card--content ul,
-.nosotros__card--content p{
-    font-size: var(--text-small);
 }
 
 .nosotros__banner3{
@@ -468,7 +396,7 @@ video {
 .menu__filtro{
     background-color: var(--primary);
     width: 100%;
-    height: 70vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -477,7 +405,7 @@ video {
 }
 
 .menu__filtro p {
-    font-size: var(--text-small);
+    font-size: var(--text-base);
     color: var(--alternative);
 }
 
@@ -503,12 +431,12 @@ video {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid white;
+    border: 2px solid var(--alternative);
     border-radius: 50%;
 }
 
 .menu__grid{
-    width: 80%;
+    width: 100%;
     justify-content: center;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -554,7 +482,6 @@ video {
     background-image: url(../img/bebidas1.webp);
     background-size: cover;
     background-position: center;
-    font-size: 0.5em;
     font-size: var(--text-base);
 }
 
@@ -579,145 +506,42 @@ video {
     font-size: var(--text-base);
 }
 
-.menu__cartilla{
-    width: 100%;
+.menu__fondo{
     background-color: var(--primary);
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    align-items: center;
 }
 
-.menu__combos{
+.menu__fondo section h2{
+    font-size: var(--text-medium);
+    color: var(--alternative);
+}
+
+.menu__nota{
     width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    gap: var(--spacing-medium);  
-}
-
-.menu__cartilla h2{
-    padding: var(--spacing-large);
-    font-size: var(--text-medium);
-    font-weight: 500;
-    color: var(--alternative);
-    text-align: center;
-}
-
-.menu__cartilla--nota{
+    margin: auto;
     font-size: var(--text-small);
     color: var(--alternative);
-    margin: var(--spacing-xsmall);
-    width: 60%;
-    text-align: center;
     border: solid 1px var(--alternative);
 }
 
-.menu__cartilla article{
-    margin-bottom: var(--spacing-large);
-}
-
-.menu__item{
-    width: 23rem;
-    height: 33rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    background-color: var(--alternative);
-    border-radius: 1rem;
-    box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.3);
-}
-
-.menu__item--img{
-    width: 100%;
-    height: 50%;
-}
-
-.menu__item--img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.menu__item--texto{
-    margin-left: 0;
-    padding: var(--spacing-xsmall);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.menu__item--texto h3{
-    font-size: var(--text-base);
-}
-
-.menu__item--texto p{
-    font-size: var(--text-small);
-}
-
-.menu__item--texto a{
-    font-size: var(--text-small);
-    margin-right: 0;
-    align-self: flex-end;
-    cursor: pointer;
-    padding: 0.5rem 2rem;
-}
-
-.menu__adicionales{
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: var(--spacing-medium);
-}
-
-.menu__adicionales h2{
-    font-size: var(--text-medium);
-    padding: var(--spacing-small);
-}
-
-.menu__adicionales section{
+.menu__adicionales ul{
     border: solid 1px var(--alternative);
-    width: 100%;
+    height: 25rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
-.menu__adicionales section ul {
+.menu__adicionales ul li{
     font-size: var(--text-small);
     color: var(--alternative);
-    margin:  auto 0;
-    padding-bottom: var(--spacing-small);
 }
-
 
 /*FIN MENU*/
 
 
 /*FRANQUICIAS*/
 
-.grid-franquicias{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 10rem 70vh 90vh repeat(3,15rem) 2fr 20rem;
-    grid-template-areas:
-    "header"
-    "banner-f"
-    "article-f"
-    "img-f1"
-    "img-f2"
-    "img-f3"
-    "img-f"
-    "footer";
-}
-
 .franquicias__banner1{
-    grid-area: banner-f ;
     background: center fixed url(../img/franquicias1.webp);
     background-size: cover;
 }
@@ -733,9 +557,6 @@ video {
 }
 
 .franquicias__texto{
-    grid-area: article-f;
-    width: 100%;
-    height: 100%;
     background-color: var(--primary);
     display: flex;
     flex-direction: column;
@@ -745,9 +566,7 @@ video {
 
 .franquicias__texto p {
     font-size: var(--text-base);
-    text-align: center;
     font-weight: 500;
-    width: 80%;
     color:var(--alternative);
 }
 
@@ -767,23 +586,25 @@ video {
     font-size: var(--text-base);
 }
 
-.franquicias__imagen1{
-    grid-area: img-f;
-}
-
 .franquicias__imagen1 img{
     width: 100%;
     height: 100%;
 }
 
-.grid-franquicias picture{
+.franquicias__imagen2{
     width: 100%;
+    height: 20vh;
     font-size: var(--text-medium);
     color: var(--alternative);
     display: flex;
     justify-content: center;
     align-items: center;
-}   
+}
+
+.f__img{
+    width: 100%;
+    height: 33.33%;
+}
 
 .franquicias__locales{
     background: center url(../img/franquicias2.webp);
@@ -799,54 +620,58 @@ video {
     background: center url(../img/franquicias4.webp);
     background-size: cover;
 }
-
+ 
 
 /*FIN FRANQUICIAS*/
 
 
 /*CONTACTO*/
 
-.contacto__contenedor{
-    display: grid;
-    grid-template-columns: 100vw;
-    grid-template-rows: 15vh 90vh 40vh;
-    grid-template-areas: 
-    "titulo"
-    "section"
-    "img";
-    width: 100%;
-    height: 100%;
+.contacto__imagen{
     background: center url(../img/contactofondo.webp);
     background-size: cover;
+    background-position: center center;
 }
 
-.contacto__contenedor h2{
-    grid-area: titulo;
+.contacto__imagen h2{
     font-size: var(--text-medium);
-    font-weight: 500;
-    justify-self: center;
-    align-self: center;
-    padding-top: 1rem;
 }
 
-.contacto__contenedor h2 span{
-    background-color: var(--secondary);
+.contacto__imagen h2 span{
+    background-color: var(--primary);
 }
 
-.contacto__card{
-    grid-area: section;
-    align-self: center;
-    justify-self: center;
-    width: 80%;
-    height: 90%;
+.contenedor__formulario{
     background: rgba( 255, 255, 255, 0.25 );
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     backdrop-filter: blur( 5px );
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-    border-radius: 4rem;
+    border-radius: 2rem;
 }
 
-.contacto__card img{
+.contenedor__formulario label{
+    font-size: var(--text-small);
+    color: var(--alternative);
+}
+
+.contenedor__formulario input,
+.contenedor__formulario textarea{
+    background-color: rgba( 255, 255, 255, 0.25 );
+    resize: none;
+    border: 1px solid rgba( 255, 255, 255, 0.6 ) ;
+    color: var(--alternative);
+    font-size: var(--text-small);
+}
+
+.contenedor__formulario input:focus,
+.contenedor__formulario textarea:focus{
+    background-color: rgba( 255, 255, 255, 0.25);
+    border-color: rgba( 255, 255, 255, 0.8);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba( 255, 255, 255, 0.6 );
+    color: var(--alternative);
+}
+
+.logo__contacto{
     width: 8rem;
     height: 8rem;
     border-radius: 50%;
@@ -855,62 +680,11 @@ video {
     left: 0;
     right: 0;
     bottom: 0;
-    margin: 0 auto;
+    margin: 0 auto; 
 }
 
-.contacto__formulario{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column ;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-xsmall);
-}
-
-.contacto__formulario input{
-    width: 80%;
-    height: 3rem;
-    border: none;
-    background-color: rgba( 255, 255, 255, 0.25 );
-    font-size: var(--text-small);
-    outline-style: none;
-    border-bottom: 1px solid var(--alternative);
-    color: var(--alternative);
-    padding: var(--spacing-xsmall);
-}
-
-.contacto__formulario textarea{
-    width: 80%;
-    height: 10rem;
-    border: none;
-    background-color: rgba( 255, 255, 255, 0.25 );
-    font-size: var(--text-small);
-    outline-style: none;
-    border-bottom: 1px solid var(--alternative);
-    resize: none;
-    color: var(--alternative);
-    padding: var(--spacing-xsmall);
-}
-
-.contacto__formulario p {
-    font-size: var(--text-small);
-}
-
-.contacto__formulario p input{
-    height: 1rem;
-    width: 1rem;
-}
-
-.contacto__imagen{
-    grid-area: img;
-    width: 20rem;
-    height: 20rem;
-    justify-self: center;
-    align-self: center;
-    background-color: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    border-radius: 50%;
+.contactobtn{
+    background-color: var(--primary)
 }
 
 
@@ -983,39 +757,25 @@ video {
     .nosotros__texto h1{
         font-size: var(--text-large);
     }
-    .nosotros__galeria{
-        grid-template-columns: repeat(4,1fr);
-        grid-auto-rows: 24rem ;
+    .carousel{
+        width: 80vw;
+        margin: 0 auto;
     }
-    .nosotros__lacasita:nth-child(6){
-        grid-column: span 1;
-    }
-    .nosotros__lacasita:nth-child(11){
-        grid-row: span 2;
-    }
-    .nosotros__lacasita:nth-child(14){
-        grid-column: span 2;
-    }
-    .nosotros__lacasita:nth-child(15){
-        grid-row: span 2;
-    }
-    .nosotros__lacasita:nth-child(16){
-        grid-row: span 1;
-    }
+    .carousel-item{
+        width: 100%;
+        height: 70vh;
+      }
 }
 
 
 /*MENU*/
 
 @media(min-width:768px){
-    .menu__filtro{
-        height: 80vh;
-    }
     .menu__filtro p{
         font-size: var(--text-medium);
     }
     .menu__grid{
-        width: 60%;
+        width: 80%;
         grid-template-columns: repeat(6,1fr);
         grid-template-rows: repeat(3, 10rem);
     }
@@ -1023,57 +783,25 @@ video {
         grid-column: span 2;
         grid-row: span 3;
     }
-    .menu__cartilla h2 {
+    .menu__fondo section h2{
         font-size: var(--text-large);
     }
-    .menu__item{
-        width: 80%;
-        height: 15rem;
-        flex-direction: row;
+    .menu__adicionales ul{
+        height: 33rem;
     }
-    .menu__item--img{
-        width: 30%;
-        height: 100%;
-    }
-    .menu__item--texto{
-        margin-left: var(--spacing-medium);
-    }
-    .menu__item--texto h3{
-        font-size: var(--text-medium);
-    }
-    .menu__item--texto p{
-        font-size: var(--text-base);
-    }
-    .menu__item--texto a{
-        font-size: var(--text-small);
-        margin-right: var(--spacing-xsmall);
-    }
-    .menu__adicionales{
-        flex-direction: row;
-        width: 80%;
-        justify-content: center;
-    }
-    .menu__adicionales section ul{
-        margin: 0 auto;
+    .menu__adicionales ul li {
         font-size: var(--text-base);
     }
 }
 
 /*FRANQUICIAS*/
+@media(min-width:576px){
+    .franquicias__imagen2{
+        height: 100%;
+    }
+}
 
 @media(min-width:768px){
-    .grid-franquicias{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 5rem 70vh 90vh repeat(3,50vh) 20rem;
-        grid-template-areas: 
-        "header header"
-        "banner-f banner-f"
-        "article-f article-f"
-        "img-f img-f1"
-        "img-f img-f2"
-        "img-f img-f3"
-        "footer footer";
-    }
     .franquicias__banner1 h2{
         font-size: var(--text-large);
     }
@@ -1090,31 +818,15 @@ video {
     .franquicias__contacto{
         font-size: var(--text-medium);
     }
-    .grid-franquicias picture{
+    .franquicias__imagen2{
         font-size: var(--text-large);
     }
 }
 
 /*CONTACTO*/
-
 @media(min-width:768px){
-    .contacto__contenedor{
-        grid-template-columns: 40vw 60vw;
-        grid-template-rows: 22vh 100vh;
-        grid-template-areas: 
-        "titulo titulo"
-        ". section";
-    }
-    .contacto__contenedor h2 {
+    .contacto__imagen h2{
         font-size: var(--text-large);
-    }
-    .contacto__card img{
-        width: 12rem;
-        height: 12rem;
-        top: -6rem;
-    }
-    .contacto__imagen{
-        display: none;
     }
 }
 
@@ -1124,5 +836,4 @@ video {
     .footer__redes--texto{
         font-size: var(--text-base);
     }
-    
 }

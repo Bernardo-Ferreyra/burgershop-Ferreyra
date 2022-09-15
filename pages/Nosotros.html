@@ -14,6 +14,8 @@
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <!--Custom css-->
     <link rel="stylesheet" href="../styles/styles.css">
 
@@ -22,129 +24,223 @@
 
 <body>
     
-    <!--barra de navegacion-->
-    <header class="navegacion">
-        <a href="../index.html" class="navegacion__logo">
-            <img src="../img/logo1.webp" alt="logo">
-            <h1>La casita Azul</h1>
-        </a>
-        <nav class="navegacion__menu">
-            <ul class="navegacion__menu--links">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="Nosotros.html">Nosotros</a></li>
-                <li><a href="Menu.html">Menu</a></li>
-                <li><a href="Franquicias.html">Franquicias</a></li>
-                <li><a href="Contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- fin barra de navegacion-->
+    <main class="container-fluid">
 
-    <!--sobre nosotros-->
-    <main>
-
-        <div class="nosotros__banner1 banner">
-            <h2 class="animacion__titulo">Nosotros<span></span></h2>
-        </div>
-
-        <section class="nosotros__texto">
-            <p>somos</p>
-            <h1>La casita Azul</h1>
-            <p>Bienvenido! nos dedicamos a hacer de una hamburguesa una experiencia unica!
-            es por eso que trabajamos en este emprendimiento durante tantos años, nos gustan las buguers! sabemos hacerlas! son para vos!
-            </p>
-            <img class="logo" src="../img/logo1.webp" alt="logo la casita azul">
-            <h3>Galeria</h3>
-            <article class="nosotros__galeria">
-                <img class="nosotros__lacasita" src="../img/lacasita1.webp" alt="la casita azul">
-                <img class="nosotros__lacasita" src="../img/lacasita3.webp" alt="la casita azul">
-                <img class="nosotros__lacasita" src="../img/lacasita2.webp" alt="la casita azul">
-                <img class="nosotros__lacasita" src="../img/lacasita4.webp" alt="la casita azul">
-                <img class="nosotros__lacasita" src="../img/lacasita5.webp" alt="la casita azul">
-                <img class="nosotros__lacasita" src="../img/lacasita6.webp" alt="la casita azul">
-                <img class="nosotros__lacasita" src="../img/lacasita8.webp" alt="la casita azul">
-                <img class="nosotros__lacasita" src="../img/lacasita7.webp" alt="la casita azul">
-                <img class="nosotros__lacasita" src="../img/lacasita10.webp" alt="la casita azul">
-                <img class="nosotros__lacasita" src="../img/lacasita9.webp" alt="la casita azul">
-                <img class="nosotros__lacasita" src="../img/lacasita11.webp" alt="la casita azul">
-                <img class="nosotros__lacasita" src="../img/lacasita12.webp" alt="la casita azul">
-                <img class="nosotros__lacasita" src="../img/lacasita13.webp" alt="la casita azul">
-                <img class="nosotros__lacasita" src="../img/lacasita14.webp" alt="la casita azul">
-                <img class="nosotros__lacasita" src="../img/lacasita15.webp" alt="la casita azul">
-                <img class="nosotros__lacasita" src="../img/lacasita17.webp" alt="la casita azul">
-                <img class="nosotros__lacasita" src="../img/lacasita16.webp" alt="la casita azul">
-            </article>
-        </section>
-
-        <div class="nosotros__banner2 banner">
-            <h2>Burger Lovers</h2>
-        </div>
-
-        <section class="nosotros__info">
-            <article class="nosotros__cards--container">
-                <div class="nosotros__card">
-                    <div class="nosotros__card--circle">
-                        <i class="fa-solid fa-location-dot"></i>
-                    </div>
-                    <div class="nosotros__card--content">
-                        <h3>Delivery</h3>
-                        <ul>
-                            <li>Coghlan</li>
-                            <li>Saavedra</li>
-                            <li>Belgrano</li>
-                            <li>Nuñez</li>
-                            <li>Villa Urquiza</li>
+        <!--barra de navegacion-->
+        <section class="row">
+            <section class="col p-0">
+                <nav class="navbar navbar-dark navbar-expand-md py-0">
+                    <a href="../index.html" class="navegacion__logo">
+                        <img src="../img/logo1.webp" alt="logo">
+                        <h1>La casita Azul</h1>
+                    </a>
+                    <button class="navbar-toggler custom-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse pe-md-5 pe-sm-0" id="navbarNav">
+                        <ul class="navbar-nav w-100 justify-content-end text-center gap-3 gap-sm-4 gap-md-5">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Nosotros.html">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Menu.html">Menu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Franquicias.html">Franquicias</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Contacto.html">Contacto</a>
+                            </li>
                         </ul>
                     </div>
-                </div>
-
-                <div class="nosotros__card">
-                    <div class="nosotros__card--circle">
-                        <i class="fa-regular fa-clock"></i>
-                    </div>
-                    <div class="nosotros__card--content">
-                        <h3>Horarios</h3>
-                        <p>Viernes - Lunes</p>
-                        <p>19:00 - 23:00</p>
-                    </div>
-                </div>
-
-                <div class="nosotros__card">
-                    <div class="nosotros__card--circle">
-                        <i class="fa-solid fa-money-check-dollar"></i>
-                    </div>
-                    <div class="nosotros__card--content">
-                        <h3>Medios de pago</h3>
-                        <p>Mercadopago</p>
-                        <p>Efectivo</p>
-                    </div>
-                </div>
-            </article>  
+                </nav>
+            </section>
         </section>
 
-        <div class="nosotros__banner3 banner">
-            <button class="btn"><a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>
-        </div>
-        
+        <!-- fin barra de navegacion-->
+
+    
+        <!--sobre nosotros-->
+        <section class="row">
+            <section class="col p-0">
+                <div class="nosotros__banner1 banner">
+                    <h2 class="animacion__titulo">Nosotros<span></span></h2>
+                </div>
+            </section>
+        </section>
+
+        <section class="row">
+            <section class="col p-0">
+                <main class="nosotros__texto text-center p-5">
+                    <p>somos</p>
+                    <h1 class="m-4 p-md-4">La casita Azul</h1>
+                    <p class="my-5 mx-md-5 px-md-5">Bienvenido! nos dedicamos a hacer de una hamburguesa una experiencia unica! es por eso que trabajamos en este emprendimiento durante tantos años, nos gustan las buguers! sabemos hacerlas! son para vos!
+                    </p>
+                    <img class="logo" src="../img/logo1.webp" alt="logo la casita azul">
+
+                    <h3 class="text-center m-5">Galeria</h3>
+                    <div id="carouselExampleControls" class="carousel slide mb-5" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="../img/lacasita1.webp" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/lacasita2.webp" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/lacasita3.webp" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/lacasita4.webp" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/lacasita5.webp" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/lacasita6.webp" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/lacasita7.webp" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/lacasita8.webp" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/lacasita9.webp" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/lacasita10.webp" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/lacasita11.webp" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/lacasita12.webp" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/lacasita13.webp" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/lacasita14.webp" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/lacasita15.webp" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../img/lacasita16.webp" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                </main>
+            </section>
+        </section>
+
+        <section class="row">
+            <section class="col p-0">
+                <div class="nosotros__banner2 banner">
+                    <h2>Burger Lovers</h2>
+                </div>
+            </section>
+        </section>
+
+        <section class="row nosotros__info align-items-center">
+            <section class="col-12 col-md-4 text-center p-0 my-5">
+                <div class="card mx-auto my-5 bg-dark text-white">
+                    <img src="../img/nosotroscard1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title mb-5 mt-2">Horarios</h3>
+                      <p class="card-text">Viernes - Lunes <br> 19:00 - 23:00</p>
+                    </div>
+                </div>
+            </section>
+            <section class="col-12 col-md-4 text-center p-0 my-5">
+                <div class="card mx-auto my-5 bg-dark text-white">
+                    <img src="../img/nosotroscard2.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title mb-5 mt-2">Delivery</h3>
+                      <p class="card-text"> Coghlan <br>Saavedra <br>Nuñez <br> Belgrano <br> Villa urquiza</p>
+                    </div>
+                </div>
+            </section>
+            <section class="col-12 col-md-4 text-center p-0 my-5">
+                <div class="card mx-auto my-5 bg-dark text-white">
+                    <img src="../img/nosotroscard3.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title mb-5 mt-2">Medios de pago</h3>
+                      <p class="card-text">Efectivo <br> Mercadopago </p>
+                    </div>
+                </div>
+
+            </section>
+        </section>
+
+        <section class="row">
+            <section class="col p-0">
+                <div class="nosotros__banner3 banner">
+                    <button class="btncustom"><a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>
+                </div>
+            </section>
+        </section>
+
+        <!--fin sobre nosotros-->
+
+        <!--Footer-->
+        <section class="row bg-dark py-2 align-items-center">
+            <section class="col-md-4 p-5">
+                <h3 class="footer__redes--texto text-center">Seguinos en nuestras redes sociales!</h3>
+                <ul class="footer__links mt-5 p-0 d-flex justify-content-evenly">
+                    <li>
+                        <a href="https://www.instagram.com/lacasitaazulburgers/" target="_blank">
+                            <i class="fa-brands fa-instagram "></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/lacasitaazulburgers/" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="col-md-4 py-5 px-4">
+                <h2 class="footer__titulo--logo text-center">La casita<span>Azul</span></h2>
+                <img class="footer__logo mx-auto d-block" src="../img/logo1.webp" alt="logo">
+            </section>
+            <section class="col-md-4 p-5 text-secondary text-center">
+                <ul class="footer__datos p-0">
+                    <li><i class="fa-solid fa-location-dot"></i> La casita azul - burgers</li>
+                    <li>Coghlan - CABA - Argentina</li>
+                    <li>lacasitaazulburgers@gmail.com</li>
+                    <li>+54 11 6621-8027</li>
+                </ul>
+            </section>
+        </section>
+        <section class="row align-items-center p-0 bg-black">
+            <section class="col text-center m-4">
+                <p class="text-secondary m-0"><i class="fa-solid fa-copyright"></i> La casita azul , todos los derechos reservados</p>
+            </section>
+        </section>
+
+        <!--fin Footer-->   
+
     </main>
 
-    <!--fin sobre nosotros-->
-
-    <!--Footer-->
-    <footer class="footer">
-        <h3>Seguinos en nuestras redes sociales!</h3>
-        <ul class="footer__links">
-            <li><a href="https://www.instagram.com/lacasitaazulburgers/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            </li>
-            <li><a href="https://www.facebook.com/lacasitaazulburgers/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            </li>
-            <li><a href="https://api.whatsapp.com/send?phone=01166118060" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-            </li>
-        </ul>
-        <p><i class="fa-solid fa-copyright"></i> La casita azul , todos los derechos reservados</p>
-        
-    </footer>
-    <!--fin Footer-->
-
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>

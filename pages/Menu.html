@@ -1,421 +1,476 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../img/logo1.webp">
-    
-    <!--Google font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400;700&display=swap" rel="stylesheet">
-
-    <!--Font Awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!--Custom css-->
-    <link rel="stylesheet" href="../styles/styles.css">
-
-    <title>La casita Azul - Menu</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../img/logo1.webp">
+  
+  <!--Google font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400;700&display=swap" rel="stylesheet">
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- CSS Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <!--Custom css-->
+  <link rel="stylesheet" href="../styles/styles.css">
+  <title>La casita Azul - Menu</title>
 </head>
 
-<body>
-    
-  <!--barra de navegacion-->
-    <header class="navegacion">
-        <a href="../index.html" class="navegacion__logo">
+<body> 
+
+  <main class="container-fluid">
+
+    <!--barra de navegacion-->
+    <section class="row">
+      <section class="col p-0">
+        <nav class="navbar navbar-dark navbar-expand-md py-0">
+          <a href="../index.html" class="navegacion__logo">
             <img src="../img/logo1.webp" alt="logo">
             <h1>La casita Azul</h1>
-        </a>
-        <nav class="navegacion__menu">
-            <ul class="navegacion__menu--links">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="Nosotros.html">Nosotros</a></li>
-                <li><a href="Menu.html">Menu</a></li>
-                <li><a href="Franquicias.html">Franquicias</a></li>
-                <li><a href="Contacto.html">Contacto</a></li>
+          </a>
+          <button class="navbar-toggler custom-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse pe-md-5 pe-sm-0" id="navbarNav">
+            <ul class="navbar-nav w-100 justify-content-end text-center gap-3 gap-sm-4 gap-md-5">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Menu.html">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Franquicias.html">Franquicias</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Contacto.html">Contacto</a>
+              </li>
             </ul>
+          </div>
         </nav>
-    </header>
-  <!-- fin barra de navegacion-->
+      </section>
+    </section>
+    <!-- fin barra de navegacion -->
 
-  <!--menu-->
-    <main>
-      <div class="menu__banner1 banner">
-        <h2 class="animacion__titulo">Nuestro Menu<span></span></h2>
-      </div>
-
-      <section id="menu__principal"class="menu__filtro">
-        <p>Todos nuestros productos estan echos desde la gula!</p>
-        <div class="menu__grid">
-          <a class="menu__grid--combos" href="#combos">Combos</a>
-          <a class="menu__grid--burgers" href="#burgers">Burgers</a>
-          <a class="menu__grid--especiales" href="#especiales">Especiales</a>
-          <a class="menu__grid--veggie" href="#veggie">Veggie</a>
-          <a class="menu__grid--extras" href="#adicionales">Extras</a>
-          <a class="menu__grid--bebidas" href="#adicionales">Bebibas</a>
-          <a class="menu__grid--postres" href="#adicionales">Postres</a>
+    <!--menu-->
+    <section class="row">
+      <section class="col p-0">
+        <div class="menu__banner1 banner">
+          <h2 class="animacion__titulo">Nuestro Menu<span></span></h2>
         </div>
       </section>
-      <a id="backToTopBtn" href="#menu__principal"><i class="fa-solid fa-arrow-up"></i></a>
+    </section>
 
-      <section class="menu__cartilla">
-        <!--Combos-->
-        <h2 id="combos">Combos</h2>
-        <article class="menu__combos">
-          <div class="menu__item">
-            <div class="menu__item--img">
-              <img src="../img/promo1.webp" alt="promo-1">
-            </div>
-            <div class="menu__item--texto">
-              <h3>Combo 1</h3>
-              <p>Cheeseburger Doble + papas Fritas + gaseosa o agua saborizada</p>
-              <a class="btn" href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">Comprar</a>
-            </div>
+    <section class="row">
+      <section class="col p-0">
+        <section id="menu__principal"class="menu__filtro p-5 text-center">
+          <p class="m-2 mt-5">Todos nuestros productos estan echos desde la gula!</p>
+          <div class="menu__grid p-md-5">
+            <a class="menu__grid--combos" href="#combos">Combos</a>
+            <a class="menu__grid--burgers" href="#burgers">Burgers</a>
+            <a class="menu__grid--especiales" href="#especiales">Especiales</a>
+            <a class="menu__grid--veggie" href="#veggie">Veggie</a>
+            <a class="menu__grid--extras" href="#adicionales">Extras</a>
+            <a class="menu__grid--bebidas" href="#adicionales">Bebibas</a>
+            <a class="menu__grid--postres" href="#adicionales">Postres</a>
           </div>
-
-          <div class="menu__item">
-            <div class="menu__item--img">
-              <img src="../img/promo2.webp" alt="promo-2">
-            </div>
-            <div class="menu__item--texto">
-              <h3>Combo 2</h3>
-              <p>Bacon Cheeseburger doble + papas fritas + gaseosa o agua saborizada</p>
-              <a class="btn" href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">Comprar</a>
-            </div>
-          </div>
-
-          <div class="menu__item">
-            <div class="menu__item--img">
-              <img src="../img/promo3.webp" alt="promo-3">
-            </div>
-            <div class="menu__item--texto">
-              <h3>Combo 3</h3>
-              <p>Baconion Cheeseburger doble + papas fritas + gaseosa o agua saborizada</p>
-              <a class="btn" href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">Comprar</a>
-            </div>
-          </div>
-
-          <div class="menu__item">
-            <div class="menu__item--img">
-              <img src="../img/promo4.webp" alt="promo-4">
-            </div>
-            <div class="menu__item--texto">
-              <h3>Combo 4</h3>
-              <p>American Classic Doble + papas Fritas + gaseosa o agua saborizada</p>
-              <a class="btn" href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">Comprar</a>
-            </div>
-          </div>
-
-          <div class="menu__item">
-            <div class="menu__item--img">
-              <img src="../img/promo5.webp" alt="promo-5">
-            </div>
-            <div class="menu__item--texto">
-              <h3>Combo 5</h3>
-              <p>Argentina Completa Clásica Doble + papas Fritas + gaseosa o agua saborizada</p>
-              <a class="btn" href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">Comprar</a>
-            </div>
-          </div>
-
-          <div class="menu__item">
-            <div class="menu__item--img">
-              <img src="../img/promo6.webp" alt="promo-6">
-            </div>
-            <div class="menu__item--texto">
-              <h3>Combo 6</h3>
-              <p>Argentina Especial Doble + papas Fritas + gaseosa o agua saborizada</p>
-              <a class="btn" href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">Comprar</a>
-            </div>
-          </div>
-
-          <div class="menu__item">
-            <div class="menu__item--img">
-              <img src="../img/promo1.webp" alt="promo-7">
-            </div>
-            <div class="menu__item--texto">
-              <h3>Combo 7</h3>
-              <p>Cuarto de libra La Casita Azul doble + papas Fritas + gaseosa o agua saborizada</p>
-              <a class="btn" href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">Comprar</a>
-            </div>
-          </div>
-
-          <div class="menu__item">
-            <div class="menu__item--img">
-              <img src="../img/promo4.webp" alt="promo-8">
-            </div>
-            <div class="menu__item--texto">
-              <h3>Combo 8</h3>
-              <p>Especial Picante doble + papas Fritas + lata de cerveza</p>
-              <a class="btn" href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">Comprar</a>
-            </div>
-          </div>
-
-          <div class="menu__item">
-            <div class="menu__item--img">
-              <img src="../img/promo2.webp" alt="promo-9">
-            </div>
-            <div class="menu__item--texto">
-              <h3>Combo 9</h3>
-              <p>Especial Barbacoa doble + papas Fritas + lata de cerveza</p>
-              <a class="btn" href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">Comprar</a>
-            </div>
-          </div>
-
-          <div class="menu__item">
-            <div class="menu__item--img">
-              <img src="../img/promo6.webp" alt="promo-10">
-            </div>
-            <div class="menu__item--texto">
-              <h3>Combo 10</h3>
-              <p>Especial Criolla doble + papas Fritas + lata de cerveza</p>
-              <a class="btn" href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">Comprar</a>
-            </div>
-          </div>
-
-          <div class="menu__item">
-            <div class="menu__item--img">
-              <img src="../img/promo11.webp" alt="promo-11">
-            </div>
-            <div class="menu__item--texto">
-              <h3>Combo 11</h3>
-              <p>Especial Provoleta, bacon y huevo + papas Fritas +  lata de cerveza</p>
-              <a class="btn" href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">Comprar</a>
-            </div>
-          </div>
-
-          <div class="menu__item">
-            <div class="menu__item--img">
-              <img src="../img/promo12.webp" alt="promo-12">
-            </div>
-            <div class="menu__item--texto">
-              <h3>Combo 12</h3>
-              <p>Especial Provoleta, rúcula y tomates confitados + papas Fritas +  lata de cerveza</p>
-              <a class="btn" href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">Comprar</a>
-            </div>
-          </div>
-        </article>
-
-        <!--Burgers-->
-        <h2 id="burgers" >Burgers</h2>
-        <p class="menu__cartilla--nota">*TODAS LAS HAMBURGUESAS INCLUYEN PAPAS FRITAS / *MEDALLON A ELECCIÓN ENTRE CARNE Y POLLO</p>
-        <article class="menu__combos">
-          <div class="menu__item">
-            <div class="menu__item--img">
-              <img src="../img/promo1.webp" alt="burger-1">
-            </div>
-            <div class="menu__item--texto">
-              <h3>Cheeseburger</h3>
-              <p>Pan, medallón de 140 gr, cheddar / (simple o doble) </p>
-              <a class="btn" href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">Comprar</a>
-            </div>
-          </div>
-
-          <div class="menu__item">
-            <div class="menu__item--img">
-              <img src="../img/promo2.webp" alt="burger-2">
-            </div>
-            <div class="menu__item--texto">
-              <h3>Bacon Cheeseburger</h3>
-              <p>Pan, medallón de 140gr, bacon, cheddar / (simple o doble)</p>
-              <a class="btn" href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">Comprar</a>
-            </div>
-          </div>
-
-          <div class="menu__item">
-            <div class="menu__item--img">
-              <img src="../img/promo3.webp" alt="burger-3">
-            </div>
-            <div class="menu__item--texto">
-              <h3>Baconion Cheeseburger</h3>
-              <p>Pan, medallón de 140gr, bacon, cheddar, cebolla / (simple o doble)</p>
-              <a class="btn" href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">Comprar</a>
-            </div>
-          </div>
-
-          <div class="menu__item">
-            <div class="menu__item--img">
-              <img src="../img/promo4.webp" alt="burger-4">
-            </div>
-            <div class="menu__item--texto">
-              <h3>American Classic</h3>
-              <p>Pan, medallón de 140gr, bacon, cebolla, lechuga, tomate, cheddar / (simple o doble)</p>
-              <a class="btn" href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">Comprar</a>
-            </div>
-          </div>
-
-          <div class="menu__item">
-            <div class="menu__item--img">
-              <img src="../img/promo5.webp" alt="burger-5">
-            </div>
-            <div class="menu__item--texto">
-              <h3>Argentina Clasica</h3>
-              <p>Pan, medallón de 140gr, jamón, lechuga, tomate, huevo, cheddar / (simple o doble)</p>
-              <a class="btn" href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">Comprar</a>
-            </div>
-          </div>
-
-          <div class="menu__item">
-            <div class="menu__item--img">
-              <img src="../img/promo6.webp" alt="burger-6">
-            </div>
-            <div class="menu__item--texto">
-              <h3>Argentina Especial</h3>
-              <p>Pan, medallón de 140 gr, jamón, morrón asado, huevo, cheddar / (simple o doble)</p>
-              <a class="btn" href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">Comprar</a>
-            </div>
-          </div>
-
-          <div class="menu__item">
-            <div class="menu__item--img">
-              <img src="../img/promo1.webp" alt="burger-7">
-            </div>
-            <div class="menu__item--texto">
-              <h3>1/4 Libra La Casita</h3>
-              <p>Pan, medallón de 140gr, salsa "1/4 de libra" y pepinillos a elección / (simple o doble)</p>
-              <a class="btn" href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">Comprar</a>
-            </div>
-          </div>
-        </article>
-
-        <!--Especiales-->
-        <h2 id="especiales">Especiales</h2>
-        <p class="menu__cartilla--nota">*TODAS LAS HAMBURGUESAS INCLUYEN PAPAS FRITAS / *MEDALLON A ELECCIÓN ENTRE CARNE Y POLLO</p>
-        <article class="menu__combos">
-          <div class="menu__item">
-            <div class="menu__item--img">
-              <img src="../img/promo1.webp" alt="especiales-1">
-            </div>
-            <div class="menu__item--texto">
-              <h3>Provoleta y Bacon</h3>
-              <p>Pan, medallón de 140 gr, provoleta, bacon, huevo / (simple o doble) </p>
-              <a class="btn" href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">Comprar</a>
-            </div>
-          </div>
-
-          <div class="menu__item">
-            <div class="menu__item--img">
-              <img src="../img/promo2.webp" alt="especiales-2">
-            </div>
-            <div class="menu__item--texto">
-              <h3>Provoleta y Rucula</h3>
-              <p>Pan, medallón de 140 gr, provoleta, rúcula, tomates confitados / (simple o doble)</p>
-              <a class="btn" href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">Comprar</a>
-            </div>
-          </div>
-
-          <div class="menu__item">
-            <div class="menu__item--img">
-              <img src="../img/promo3.webp" alt="especiales-3">
-            </div>
-            <div class="menu__item--texto">
-              <h3>Criolla</h3>
-              <p>Pan, medallón de 140 gr, lechuga, tomate, salsa criolla, cheddar / (simple o doble)</p>
-              <a class="btn" href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">Comprar</a>
-            </div>
-          </div>
-
-          <div class="menu__item">
-            <div class="menu__item--img">
-              <img src="../img/promo4.webp" alt="especiales-4">
-            </div>
-            <div class="menu__item--texto">
-              <h3>Barbacoa</h3>
-              <p>Pan, medallón de 140 gr, bacon, cebolla morada, barbacoa ahumada, cheddar / (simple o doble)</p>
-              <a class="btn" href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">Comprar</a>
-            </div>
-          </div>
-
-          <div class="menu__item">
-            <div class="menu__item--img">
-              <img src="../img/promo5.webp" alt="especiales-5">
-            </div>
-            <div class="menu__item--texto">
-              <h3>Picante</h3>
-              <p>Pan, medallón de 140 gr, bacon, morrón asado, salsa picante, cheddar / (simple o doble)</p>
-              <a class="btn" href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">Comprar</a>
-            </div>
-          </div>
-        </article>
-
-        <!--Veggie-->
-        <h2 id="veggie">Veggie</h2>
-        <p class="menu__cartilla--nota">*TODAS LAS HAMBURGUESAS INCLUYEN PAPAS FRITAS / *MEDALLON A ELECCIÓN ENTRE QUINOA, POROTOS MUNG O LENTEJON CANADIENSE</p>
-        <article class="menu__combos">
-          <div class="menu__item">
-            <div class="menu__item--img">
-              <img src="../img/veggie-1.webp" alt="veggie-1">
-            </div>
-            <div class="menu__item--texto">
-              <h3>Veggie</h3>
-              <p>Lechuga, tomate, cebolla caramelizada, morrón asado / (cheddar o provoleta) </p>
-              <a class="btn" href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">Comprar</a>
-            </div>
-          </div>
-        </article>
-
-        <!--Adicionales-->
-        <h2 id="adicionales">Adicionales</h2>
-        <article class="menu__adicionales">
-          <section class="menu__adicionales--extras">
-            <h2>Extras</h2>
-            <ul>
-              <li>Panceta</li>
-              <li>Cheddar</li>
-              <li>Pepinillos</li>
-              <li>Cebolla Caramelizada</li>
-              <li>Cebolla Morada</li>
-              <li>Jamon</li>
-              <li>Morron</li>
-              <li>Medallón extra con cheddar</li>
-              <li>Salsa criolla</li>
-              <li>Salsa Barbacoa</li>
-              <li>Salsa Picante</li>
-            </ul>
-          </section>
-
-          <section class="menu__adicionales--bebidas">
-            <h2>Bebidas</h2>
-            <ul>
-              <li>Cerveza quilmes</li>
-              <li>Coca cola</li>
-              <li>Sprite</li>
-              <li>Fanta</li>
-              <li>Agua saborizada</li>
-            </ul>
-          </section>
-
-          <section class="menu__adicionales--postres">
-            <h2>Postres</h2>
-            <ul>
-              <li>Tiramisú</li>
-              <li>Cheesecake</li>
-              <li>Torta Oreo</li>
-            </ul>
-          </section>
-        </article>
-
+        </section>
       </section>
-    </main>
+    </section>
 
-  <!--fin menu-->
+    <a id="backToTopBtn" href="#menu__principal"><i class="fa-solid fa-arrow-up"></i></a>
 
-  <!--Footer-->
-    <footer class="footer">
-        <h3>Seguinos en nuestras redes sociales!</h3>
-        <ul class="footer__links">
-            <li><a href="https://www.instagram.com/lacasitaazulburgers/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            </li>
-            <li><a href="https://www.facebook.com/lacasitaazulburgers/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            </li>
-            <li><a href="https://api.whatsapp.com/send?phone=01166118060" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-            </li>
+    <!-- COMBOS -->
+    <section class="row menu__fondo align-items-center py-5">
+      <section class="col-sm-12 p-5">
+        <h2 class="text-center m-5" id="combos">Combos</h2>
+      </section>
+
+      <section class="col-sm-6 col-md-4 col-lg-3 text-center">
+        <div class="card mx-auto my-5">
+            <img src="../img/promo1.webp" alt="promo-1">
+          <div class="card-body d-flex flex-column justify-content-around">
+            <h3 class="card-title">Combo 1</h3>
+            <p class="card-text m-auto h-50">Cheeseburger Doble + papas Fritas + gaseosa o agua saborizada</p>
+            <button class="btncustom w-75 align-self-center"><a class="text-white" href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>          </div>
+        </div>
+      </section>
+
+      <section class="col-sm-6 col-md-4 col-lg-3 text-center">
+        <div class="card mx-auto my-5">
+            <img src="../img/promo2.webp" alt="promo-2">
+          <div class="card-body d-flex flex-column justify-content-around">
+            <h3 class="card-title">Combo 2</h3>
+            <p class="card-text m-auto h-50">Bacon Cheeseburger doble + papas fritas + gaseosa o agua saborizada</p>
+            <button class="btncustom w-75 align-self-center"><a class="text-white" href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>          </div>
+        </div>
+      </section>
+
+      <section class="col-sm-6 col-md-4 col-lg-3 text-center">
+        <div class="card mx-auto my-5">
+            <img src="../img/promo3.webp" alt="promo-3">
+          <div class="card-body d-flex flex-column justify-content-around">
+            <h3 class="card-title">Combo 3</h3>
+            <p class="card-text m-auto h-50">Baconion Cheeseburger doble + papas fritas + gaseosa o agua saborizada</p>
+            <button class="btncustom w-75 align-self-center"><a class="text-white" href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>          </div>
+        </div>
+      </section>
+
+      <section class="col-sm-6 col-md-4 col-lg-3 text-center">
+        <div class="card mx-auto my-5">
+            <img src="../img/promo4.webp" alt="promo-4">
+          <div class="card-body d-flex flex-column justify-content-around">
+            <h3 class="card-title">Combo 4</h3>
+            <p class="card-text m-auto h-50">American Classic Doble + papas Fritas + gaseosa o agua saborizada</p>
+            <button class="btncustom w-75 align-self-center"><a class="text-white" href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>          </div>
+        </div>
+      </section>
+
+      <section class="col-sm-6 col-md-4 col-lg-3 text-center">
+        <div class="card mx-auto my-5">
+            <img src="../img/promo5.webp" alt="promo-5">
+          <div class="card-body d-flex flex-column justify-content-around">
+            <h3 class="card-title">Combo 5</h3>
+            <p class="card-text m-auto h-50">Argentina Completa Clásica Doble + papas Fritas + gaseosa o agua saborizada</p>
+            <button class="btncustom w-75 align-self-center"><a class="text-white" href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>          </div>
+        </div>
+      </section>
+
+      <section class="col-sm-6 col-md-4 col-lg-3 text-center">
+        <div class="card mx-auto my-5">
+            <img src="../img/promo6.webp" alt="promo-6">
+          <div class="card-body d-flex flex-column justify-content-around">
+            <h3 class="card-title">Combo 6</h3>
+            <p class="card-text m-auto h-50">Argentina Especial Doble + papas Fritas + gaseosa o agua saborizada</p>
+            <button class="btncustom w-75 align-self-center"><a class="text-white" href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>          </div>
+        </div>
+      </section>
+
+      <section class="col-sm-6 col-md-4 col-lg-3 text-center">
+        <div class="card mx-auto my-5">
+            <img src="../img/promo1.webp" alt="promo-7">
+          <div class="card-body d-flex flex-column justify-content-around">
+            <h3 class="card-title">Combo 7</h3>
+            <p class="card-text m-auto h-50">Cuarto de libra La Casita Azul doble + papas Fritas + gaseosa o agua saborizada</p>
+            <button class="btncustom w-75 align-self-center"><a class="text-white" href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>          </div>
+        </div>
+      </section>
+
+      <section class="col-sm-6 col-md-4 col-lg-3 text-center">
+        <div class="card mx-auto my-5">
+            <img src="../img/promo4.webp" alt="promo-8">
+          <div class="card-body d-flex flex-column justify-content-around">
+            <h3 class="card-title">Combo 8</h3>
+            <p class="card-text m-auto h-50">Especial Picante doble + papas Fritas + lata de cerveza</p>
+            <button class="btncustom w-75 align-self-center"><a class="text-white" href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>          </div>
+        </div>
+      </section>
+
+      <section class="col-sm-6 col-md-4 col-lg-3 text-center">
+        <div class="card mx-auto my-5">
+            <img src="../img/promo2.webp" alt="promo-9">
+          <div class="card-body d-flex flex-column justify-content-around">
+            <h3 class="card-title">Combo 9</h3>
+            <p class="card-text m-auto h-50">Especial Picante doble + papas Fritas + lata de cerveza</p>
+            <button class="btncustom w-75 align-self-center"><a class="text-white" href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>          </div>
+        </div>
+      </section>
+
+      <section class="col-sm-6 col-md-4 col-lg-3 text-center">
+        <div class="card mx-auto my-5">
+            <img src="../img/promo6.webp" alt="promo-10">
+          <div class="card-body d-flex flex-column justify-content-around">
+            <h3 class="card-title">Combo 10</h3>
+            <p class="card-text m-auto h-50">Especial Criolla doble + papas Fritas + lata de cerveza</p>
+            <button class="btncustom w-75 align-self-center"><a class="text-white" href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>          </div>
+        </div>
+      </section>
+
+      <section class="col-sm-6 col-md-4 col-lg-3 text-center">
+        <div class="card mx-auto my-5">
+            <img src="../img/promo11.webp" alt="promo-11">
+          <div class="card-body d-flex flex-column justify-content-around">
+            <h3 class="card-title">Combo 11</h3>
+            <p class="card-text m-auto h-50">Especial Provoleta, bacon y huevo + papas Fritas +  lata de cerveza</p>
+            <button class="btncustom w-75 align-self-center"><a class="text-white" href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>          </div>
+        </div>
+      </section>
+
+      <section class="col-sm-6 col-md-4 col-lg-3 text-center">
+        <div class="card mx-auto my-5">
+            <img src="../img/promo12.webp" alt="promo-12">
+          <div class="card-body d-flex flex-column justify-content-around">
+            <h3 class="card-title">Combo 12</h3>
+            <p class="card-text m-auto h-50">Especial Provoleta, rúcula y tomates confitados + papas Fritas +  lata de cerveza</p>
+            <button class="btncustom w-75 align-self-center"><a class="text-white" href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- BURGERS -->
+    <section class="row menu__fondo align-items-center py-5">
+      <section class="col-sm-12 p-5">
+        <h2 class="text-center m-5" id="burgers">Burgers</h2>
+        <p class="menu__nota text-center p-2">*TODAS LAS HAMBURGUESAS INCLUYEN PAPAS FRITAS / *MEDALLON A ELECCIÓN ENTRE CARNE Y POLLO</p>
+      </section>
+
+      <section class="col-sm-6 col-md-4 col-lg-3 text-center">
+        <div class="card mx-auto my-5">
+            <img src="../img/promo1.webp" alt="burger-1">
+          <div class="card-body d-flex flex-column justify-content-around">
+            <h3 class="card-title">Cheeseburger</h3>
+            <p class="card-text m-auto h-50">Pan, medallón de 140 gr, cheddar / (simple o doble)</p>
+            <button class="btncustom w-75 align-self-center"><a class="text-white" href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>          </div>
+        </div>
+      </section>
+
+      <section class="col-sm-6 col-md-4 col-lg-3 text-center">
+        <div class="card mx-auto my-5">
+            <img src="../img/promo2.webp" alt="burger-2">
+          <div class="card-body d-flex flex-column justify-content-around">
+            <h3 class="card-title">Bacon Cheeseburger</h3>
+            <p class="card-text m-auto h-50">Pan, medallón de 140gr, bacon, cheddar / (simple o doble)</p>
+            <button class="btncustom w-75 align-self-center"><a class="text-white" href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>          </div>
+        </div>
+      </section>
+
+      <section class="col-sm-6 col-md-4 col-lg-3 text-center">
+        <div class="card mx-auto my-5">
+            <img src="../img/promo3.webp" alt="burger-3">
+          <div class="card-body d-flex flex-column justify-content-around">
+            <h3 class="card-title">Baconion Cheeseburger</h3>
+            <p class="card-text m-auto h-50">Pan, medallón de 140gr, bacon, cheddar, cebolla / (simple o doble)</p>
+            <button class="btncustom w-75 align-self-center"><a class="text-white" href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>          </div>
+        </div>
+      </section>
+
+      <section class="col-sm-6 col-md-4 col-lg-3 text-center">
+        <div class="card mx-auto my-5">
+            <img src="../img/promo4.webp" alt="burger-4">
+          <div class="card-body d-flex flex-column justify-content-around">
+            <h3 class="card-title">American Classic</h3>
+            <p class="card-text m-auto h-50">Pan, medallón de 140gr, bacon, cebolla, lechuga, tomate, cheddar / (simple o doble)</p>
+            <button class="btncustom w-75 align-self-center"><a class="text-white" href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>          </div>
+        </div>
+      </section>
+
+      <section class="col-sm-6 col-md-4 col-lg-3 text-center">
+        <div class="card mx-auto my-5">
+            <img src="../img/promo5.webp" alt="burger-5">
+          <div class="card-body d-flex flex-column justify-content-around">
+            <h3 class="card-title">Argentina Clasica</h3>
+            <p class="card-text m-auto h-50">Pan, medallón de 140gr, jamón, lechuga, tomate, huevo, cheddar / (simple o doble)</p>
+            <button class="btncustom w-75 align-self-center"><a class="text-white" href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>          </div>
+        </div>
+      </section>
+
+      <section class="col-sm-6 col-md-4 col-lg-3 text-center">
+        <div class="card mx-auto my-5">
+            <img src="../img/promo6.webp" alt="burger-6">
+          <div class="card-body d-flex flex-column justify-content-around">
+            <h3 class="card-title">Argentina Especial</h3>
+            <p class="card-text m-auto h-50">Pan, medallón de 140 gr, jamón, morrón asado, huevo, cheddar / (simple o doble)</p>
+            <button class="btncustom w-75 align-self-center"><a class="text-white" href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>          </div>
+        </div>
+      </section>
+
+      <section class="col-sm-6 col-md-4 col-lg-3 text-center">
+        <div class="card mx-auto my-5">
+            <img src="../img/promo1.webp" alt="promo-7">
+          <div class="card-body d-flex flex-column justify-content-around">
+            <h3 class="card-title">1/4 Libra La Casita</h3>
+            <p class="card-text m-auto h-50">Pan, medallón de 140gr, salsa "1/4 de libra" y pepinillos a elección / (simple o doble)</p>
+            <button class="btncustom w-75 align-self-center"><a class="text-white" href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- ESPECIALES -->
+    <section class="row menu__fondo align-items-center py-5">
+      <section class="col-sm-12 p-5">
+        <h2 class="text-center m-5" id="especiales">Especiales</h2>
+        <p class="menu__nota text-center p-2">*TODAS LAS HAMBURGUESAS INCLUYEN PAPAS FRITAS / *MEDALLON A ELECCIÓN ENTRE CARNE Y POLLO</p>
+      </section>
+
+      <section class="col-sm-6 col-md-4 col-lg-3 text-center">
+        <div class="card mx-auto my-5">
+            <img src="../img/promo1.webp" alt="especiales-1">
+          <div class="card-body d-flex flex-column justify-content-around">
+            <h3 class="card-title">Provoleta y Bacon</h3>
+            <p class="card-text m-auto h-50">Pan, medallón de 140 gr, provoleta, bacon, huevo / (simple o doble)</p>
+            <button class="btncustom w-75 align-self-center"><a class="text-white" href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>          </div>
+        </div>
+      </section>
+
+      <section class="col-sm-6 col-md-4 col-lg-3 text-center">
+        <div class="card mx-auto my-5">
+            <img src="../img/promo2.webp" alt="especiales-2">
+          <div class="card-body d-flex flex-column justify-content-around">
+            <h3 class="card-title">Provoleta y Rucula</h3>
+            <p class="card-text m-auto h-50">Pan, medallón de 140 gr, provoleta, rúcula, tomates confitados / (simple o doble)</p>
+            <button class="btncustom w-75 align-self-center"><a class="text-white" href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="col-sm-6 col-md-4 col-lg-3 text-center">
+        <div class="card mx-auto my-5">
+            <img src="../img/promo3.webp" alt="especiales-3">
+          <div class="card-body d-flex flex-column justify-content-around">
+            <h3 class="card-title">Criolla</h3>
+            <p class="card-text m-auto h-50">Pan, medallón de 140 gr, lechuga, tomate, salsa criolla, cheddar / (simple o doble)</p>
+            <button class="btncustom w-75 align-self-center"><a class="text-white" href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="col-sm-6 col-md-4 col-lg-3 text-center">
+        <div class="card mx-auto my-5">
+            <img src="../img/promo4.webp" alt="especiales-4">
+          <div class="card-body d-flex flex-column justify-content-around">
+            <h3 class="card-title">Barbacoa</h3>
+            <p class="card-text m-auto h-50">Pan, medallón de 140 gr, bacon, cebolla morada, barbacoa ahumada, cheddar / (simple o doble)</p>
+            <button class="btncustom w-75 align-self-center"><a class="text-white" href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="col-sm-6 col-md-4 col-lg-3 text-center">
+        <div class="card mx-auto my-5">
+            <img src="../img/promo5.webp" alt="especiales-5">
+          <div class="card-body d-flex flex-column justify-content-around">
+            <h3 class="card-title">Picante</h3>
+            <p class="card-text m-auto h-50">Pan, medallón de 140 gr, bacon, morrón asado, salsa picante, cheddar / (simple o doble)</p>
+            <button class="btncustom w-75 align-self-center"><a class="text-white" href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- VEGGIE -->
+    <section class="row menu__fondo align-items-center py-5">
+      <section class="col-sm-12 p-5">
+        <h2 class="text-center m-5" id="veggie">Veggie</h2>
+        <p class="menu__nota text-center p-2">*TODAS LAS HAMBURGUESAS INCLUYEN PAPAS FRITAS / *MEDALLON A ELECCIÓN ENTRE QUINOA, POROTOS MUNG O LENTEJON CANADIENSE</p>
+      </section>
+
+      <section class="col text-center">
+        <div class="card mx-auto my-5">
+            <img src="../img/veggie-1.webp" alt="veggie-1">
+          <div class="card-body d-flex flex-column justify-content-around">
+            <h3 class="card-title">Veggie</h3>
+            <p class="card-text m-auto h-50">Lechuga, tomate, cebolla caramelizada, morrón asado / (cheddar o provoleta)</p>
+            <button class="btncustom w-75 align-self-center"><a class="text-white" href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <!--ADICIONALES-->
+    <section class="row menu__fondo">
+      <section class="col-sm-12 p-5">
+        <h2 class="text-center m-5" id="adicionales">Adicionales</h2>
+      </section>
+
+      <section class="col-sm-4 text-center menu__adicionales p-5">
+          <h2 class="ps-4">Extras</h2>
+          <ul class="m-5 p-5 mx-sm-0 px-sm-0">
+            <li>Panceta</li>
+            <li>Cheddar</li>
+            <li>Pepinillos</li>
+            <li>Cebolla Caramelizada</li>
+            <li>Cebolla Morada</li>
+            <li>Jamon</li>
+            <li>Morron</li>
+            <li>Medallón extra con cheddar</li>
+            <li>Salsa criolla</li>
+            <li>Salsa Barbacoa</li>
+            <li>Salsa Picante</li>
+          </ul>
+      </section>
+
+      <section class="col-sm-4 text-center menu__adicionales p-5 ">
+        <h2 class="ps-4">Bebidas</h2>
+        <ul class="m-5 mx-sm-0 px-sm-0">
+          <li>Cerveza quilmes</li>
+          <li>Coca cola</li>
+          <li>Sprite</li>
+          <li>Fanta</li>
+          <li>Agua saborizada</li>
         </ul>
-        <p><i class="fa-solid fa-copyright"></i> La casita azul , todos los derechos reservados</p>
-        
-    </footer>
-  <!--fin Footer-->
+      </section>
+
+      <section class="col-sm-4 text-center menu__adicionales p-5">
+        <article class="menu__postres text-center">
+          <h2 class="ps-4">Postres</h2>
+          <ul class="m-5 p-5 mx-sm-0 px-sm-0">
+            <li>Tiramisú</li>
+            <li>Cheesecake</li>
+            <li>Torta Oreo</li>
+          </ul>
+        </article>
+      </section>
+
+    </section>
+    <!--fin menu-->
+
+    <!--Footer-->
+    <section class="row bg-dark py-2 align-items-center">
+      <section class="col-md-4 p-5">
+        <h3 class="footer__redes--texto text-center">Seguinos en nuestras redes sociales!</h3>
+        <ul class="footer__links mt-5 p-0 d-flex justify-content-evenly">
+          <li>
+            <a href="https://www.instagram.com/lacasitaazulburgers/" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/lacasitaazulburgers/" target="_blank">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://api.whatsapp.com/send?phone=01166118060" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="col-md-4 py-5 px-4">
+        <h2 class="footer__titulo--logo text-center">La casita<span>Azul</span></h2>
+        <img class="footer__logo mx-auto d-block" src="../img/logo1.webp" alt="logo">
+      </section>
+      <section class="col-md-4 p-5 text-secondary text-center">
+        <ul class="footer__datos p-0">
+          <li><i class="fa-solid fa-location-dot"></i> La casita azul - burgers</li>
+          <li>Coghlan - CABA - Argentina</li>
+          <li>lacasitaazulburgers@gmail.com</li>
+          <li>+54 11 6621-8027</li>
+        </ul>
+      </section>
+    </section>
+    <section class="row align-items-center p-0 bg-black">
+      <section class="col text-center m-4">
+        <p class="text-secondary m-0"><i class="fa-solid fa-copyright"></i> La casita azul , todos los derechosreservados</p>
+      </section>
+    </section>
+    <!--fin Footer-->
+
+
+  </main>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 
 </body>
 </html>
