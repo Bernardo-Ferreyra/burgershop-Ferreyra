@@ -1,839 +1,743 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-    /*font*/
+html {
+  font-size: 62.5%; /*1rem = 10 px*/
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/*font*/
 @font-face {
-    font-family: Gloss_And_Bloom ;
-    src: url(../fonts/Gloss_And_Bloom.ttf);
+  font-family: Gloss_And_Bloom;
+  src: url(../fonts/Gloss_And_Bloom.ttf);
 }
-
-    /*GLOBALES*/
-
-:root {
-    /* Colores */
-    --primary: rgb(10, 110, 180);
-    --secondary: rgb(250, 200, 0);
-    --alternative: rgb(255 ,255 ,255);
-    --text-color: rgb(10, 10 , 10);
-
-    /* Spacings */
-    --spacing-large: 5rem;
-    --spacing-medium: 2.5rem;
-    --spacing-small: 2rem;
-    --spacing-xsmall: 1rem;
-
-    /* Font-family */
-    --font-title: 'Gloss_And_Bloom' , sans-serif;
-    --font-paragraph: 'Arima Madurai', cursive;
-
-    /* Font-Sizes */
-    --text-xlarge: 7em;
-    --text-large: 5em;
-    --text-medium: 3em;
-    --text-base: 1.8em;
-    --text-small: 1.2rem;
-}
-
-html{
-    font-size: 62.5%; /*1rem = 10 px*/
-    scroll-behavior: smooth;
-}
-
-h1, h2{
-    font-family: var(--font-title);
+/* Colores */
+/* Spacings */
+/* Font-family */
+/* Font-Sizes */
+/* GLOBALES */
+h1, h2 {
+  font-family: "Gloss_And_Bloom";
 }
 
 h3, p, a, li {
-    font-family: var(--font-paragraph);
-    text-decoration: none;
-    list-style-type: none;
+  font-family: "Arima Madurai";
+  text-decoration: none;
+  list-style-type: none;
 }
 
-img{
-    max-width: 100%;
+img {
+  max-width: 100%;
 }
 
-.banner{
+.banner {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btncustom {
+  color: rgb(255, 255, 255);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 5rem;
+  cursor: pointer;
+  padding: 0.5rem 5rem;
+  background-color: rgb(250, 200, 0);
+  transition: 0.3s ease-in-out;
+}
+.btncustom:hover {
+  transform: scale(1.2);
+}
+
+.card {
+  width: 23rem;
+  height: 33rem;
+  border-radius: 1rem;
+  box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.3);
+  border: none;
+}
+.card img {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  width: 100%;
+  height: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card-body h3 {
+  font-size: 1.8em;
+  font-weight: 600;
+}
+.card-body p {
+  font-size: 1.2rem;
+}
+
+.animacion__titulo {
+  display: block;
+  position: relative;
+  color: transparent;
+  -webkit-animation: text_reveal 1s ease forwards;
+          animation: text_reveal 1s ease forwards;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+.animacion__titulo span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 80%;
+  -webkit-animation: text_reveal_box 1s ease;
+          animation: text_reveal_box 1s ease;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes text_reveal_box {
+  50% {
     width: 100%;
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.btncustom{
-    color:var(--alternative);
-    border:none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    border-radius: 5rem;
-    cursor: pointer;
-    padding: 0.5rem 5rem;
-    background-color: var(--secondary);
-    transition: 0.3s ease-in-out;
-}
-
-.btncustom:hover{
-    transform: scale(1.2);
-}
-
-.card{
-    width: 23rem;
-    height: 33rem;
-    border-radius: var(--spacing-xsmall);
-    box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.3);
-    border: none;
-}
-
-.card img{
-    border-top-left-radius: var(--spacing-xsmall);
-    border-top-right-radius: var(--spacing-xsmall);
-    width: 100%;
-    height: 50%;
-    object-fit: cover;
-}
-
-.card-body h3{
-    font-size: var(--text-base);
-    font-weight: 600;
-}
-
-.card-body p{
-    font-size: var(--text-small);
-}
-
-.animacion__titulo{
-    display: block;
-    position: relative;
-	color: transparent;
-	animation: text_reveal 1s ease forwards;
-	animation-delay: 1.4s;
-}
-.animacion__titulo span{
-    position: absolute;
-	top: 0;
-	left: 0;
-	width: 0;
-    height: 100%;
-	animation: text_reveal_box 1s ease;
-	animation-delay: 1s;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
 }
 
 @keyframes text_reveal_box {
-	50%{
-		width: 100%;
-		left: 0;
-	}
-	100%{
-		width: 0;
-		left: 100%;
-	}
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@-webkit-keyframes text_reveal {
+  100% {
+    color: rgb(255, 255, 255);
+  }
 }
 @keyframes text_reveal {
-	100%{
-		color: var(--alternative);
-	}
+  100% {
+    color: rgb(255, 255, 255);
+  }
+}
+/* NAVBAR */
+nav {
+  background-color: rgb(10, 110, 180);
+}
+nav .navegacion__logo {
+  width: 18rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+}
+nav .navegacion__logo img {
+  height: 3.8rem;
+  width: 3.8rem;
+  border-radius: 50%;
+}
+nav .navegacion__logo h1 {
+  font-size: 1.8em;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  padding-top: 1rem;
 }
 
-
-/*FIN GLOBALES*/
-
-
-/*BARRA DE NAVEGACION*/
-
-nav{
-    background-color: var(--primary);
+.nav-link {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 1.8em;
+}
+.nav-link:hover {
+  transform: scale(1.2);
+  transition: 0.2s ease;
+  color: rgb(255, 255, 255);
 }
 
-.navegacion__logo{
-    width: 18rem;
-    height: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    cursor: pointer;
-}
-
-.navegacion__logo img {
-    height: 3.8rem;
-    width: 3.8rem;
-    border-radius: 50%;
-}
-
-.navegacion__logo h1 {
-    font-size: var(--text-base);
-    color:var(--alternative);
-    font-weight: 400;
-    padding-top: var(--spacing-xsmall)
-}
-
-.nav-link{
-    color: var(--alternative);
-    cursor: pointer;
-    font-size: var(--text-base);
-}
-.nav-link:hover{
-    transform: scale(1.2);
-    transition: 0.2s ease;
-    color: var(--alternative);
-}
 .custom-toggler.navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.7);
-} 
+  border-color: rgba(255, 255, 255, 0.7);
+}
 
 .custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-
-/*FIN BARRA DE NAVEGACION*/
-
-
-/*INICIO*/
-
-.main__contenedor{
-    position: relative;
-    height: 100vh;
-}
-
-.main__contenedor::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.main__texto {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 3;
-    gap: 3rem;
-}
-
-.main__texto h2{
-    font-size: var(--text-large);
-    font-weight: 500;
-    padding-left: 1rem;
-}
-
-.main__texto h2 span{
-	background-color: var(--primary);
-}
-
-.main__texto button a {
-    color:var(--alternative);
-    font-size: var(--text-base);
-}
-
-video {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-}
-
-.main__enlaces a{
-    height: 6rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: 0.3s ease-in;
-}
-
-.main__enlaces a:hover{
-    transform: scale(1.2);
-    border-radius: 2rem;
-}
-
-.main__enlaces a p{
-    color: var(--alternative);
-    font-size: var(--text-base);
-    margin-bottom: 0;
-}
-
-.main__nosotros{
-    background: center url(../img/nosotros1.webp);
-    background-size: cover;
-}
-
-.main__menu{
-    background: bottom url(../img/menu1.png);
-    background-size: cover;
-}
-
-.main__franquicias{
-    background: center url(../img/franquicias1.webp);
-    background-size: cover;
-}
-
-.main__contacto{
-    background: center url(../img/contactofondo.webp);
-    background-size: cover;
-}
-
-
-/*FIN DE INICIO*/
-
-
-/*NOSOTROS*/
-
-.nosotros__banner1{
-    background: center fixed url(../img/nosotros1.webp);
-    background-size: cover;
-}
-
-.nosotros__banner1 h2{
-    font-size: var(--text-large);
-    font-weight: 500;
-    text-align: center;  
-}
-
-.nosotros__banner1 h2 span{
-    background-color: var(--secondary);
-}
-
-.nosotros__texto{
-    background-color:var(--secondary);
-}
-
-.nosotros__texto p {
-    font-size: var(--text-base);
-}
-
-.nosotros__texto h1 {
-    font-size: var(--text-medium);
-    font-weight: 600;
-}
-
-.logo {
-    width: 7rem;
-    height: 7rem;
-    border-radius: 50%;
-    margin: var(--spacing-medium);
-}
-
-.nosotros__texto h3 {
-    font-size: var(--text-medium);
-    font-weight: 600;
-}
-
-.carousel-item{
-    width: 100%;
-    height: 50vh;
-}
-
-.carousel-inner .carousel-item img {
-    height: 100%;
-    object-fit:cover;
-}
-
-.carousel-control-prev-icon, .carousel-control-next-icon{
-    height: 4rem;
-    width: 4rem;
-}
-
-.nosotros__banner2{
-    background: center fixed url(../img/nosotros2.webp);
-    background-size: cover;
-}
-
-.nosotros__banner2 h2{
-    font-size: var(--text-large);
-    font-weight: 500;
-    color: var(--alternative);
-    text-align: center;
-}
-
-.nosotros__info{
-    background-color: var(--secondary);
-}
-
-.nosotros__banner3{
-    background: center fixed url(../img/nosotros3.webp);
-    background-size: cover;
-}
-
-.nosotros__banner3 button a{
-    color: var(--alternative);
-    font-size: var(--text-base);
-}
-
-
-/*FIN NOSOTROS*/
-
-
-/*MENU*/
-
-.menu__banner1{
-    background: center fixed url(../img/menu1.png);
-    background-size: cover;
-}
-
-.menu__banner1 h2{
-    font-size: var(--text-large);
-    font-weight: 500;
-    text-align: center;
-}
-
-.menu__banner1 h2 span{
-    background-color: var(--primary);
-}
-
-.menu__filtro{
-    background-color: var(--primary);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: var(--spacing-medium);
-}
-
-.menu__filtro p {
-    font-size: var(--text-base);
-    color: var(--alternative);
-}
-
-#backToTopBtn {
-    font-size: var(--text-base);
-    color: var(--alternative);
-    background-color: var(--secondary);
-    width: 4rem;
-    height: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    position: fixed;
-    right: 1.5rem;
-    bottom: 1.5rem;
-    z-index: 9;
-}
-
-#backToTopBtn i{
-    width: 3.2rem;
-    height: 3.2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid var(--alternative);
-    border-radius: 50%;
-}
-
-.menu__grid{
-    width: 100%;
-    justify-content: center;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 10rem);
-    gap: var(--spacing-xsmall);
+/* FOOTER */
+.footer__redes--texto {
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
 }
 
-.menu__grid a{
-    width: 100%;
-    height: 100%;
-    color: var(--alternative);
-    border-radius: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.footer__links li a i {
+  color: rgb(255, 255, 255);
+  font-size: 3em;
+  transition: 0.2s ease-in-out;
 }
-
-.menu__grid--combos{
-    background-image: url(../img/combos1.webp);
-    background-size: cover;
-    background-position: center;
-    grid-column: span 4;
-    font-size: var(--text-medium);
-}
-
-.menu__grid--burgers{
-    background-image: url(../img/lacasita14.webp);
-    background-size: cover;
-    background-position: center;
-    grid-column: span 4;
-    font-size: var(--text-medium);
-}
-
-.menu__grid--especiales{
-    background-image: url(../img/especiales1.webp);
-    background-size: cover;
-    background-position: center;
-    grid-column: span 4;
-    font-size: var(--text-medium);
-}
-
-.menu__grid--bebidas{
-    background-image: url(../img/bebidas1.webp);
-    background-size: cover;
-    background-position: center;
-    font-size: var(--text-base);
-}
-
-.menu__grid--postres{
-    background-image: url(../img/postres1.webp);
-    background-size: cover;
-    background-position: center;
-    font-size: var(--text-base);
-}
-
-.menu__grid--extras{
-    background-image: url(../img/extras1.jpg);
-    background-size: cover;
-    background-position: center;
-    font-size: var(--text-base);
-}
-
-.menu__grid--veggie{
-    background-image: url(../img/veggie1.webp);
-    background-size: cover;
-    background-position: center;
-    font-size: var(--text-base);
-}
-
-.menu__fondo{
-    background-color: var(--primary);
-}
-
-.menu__fondo section h2{
-    font-size: var(--text-medium);
-    color: var(--alternative);
-}
-
-.menu__nota{
-    width: 80%;
-    margin: auto;
-    font-size: var(--text-small);
-    color: var(--alternative);
-    border: solid 1px var(--alternative);
-}
-
-.menu__adicionales ul{
-    border: solid 1px var(--alternative);
-    height: 25rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.menu__adicionales ul li{
-    font-size: var(--text-small);
-    color: var(--alternative);
-}
-
-/*FIN MENU*/
-
-
-/*FRANQUICIAS*/
-
-.franquicias__banner1{
-    background: center fixed url(../img/franquicias1.webp);
-    background-size: cover;
-}
-
-.franquicias__banner1 h2{
-    font-size: var(--text-medium);
-    text-align: center;
-    font-weight: 500;
-}
-
-.franquicias__banner1 h2 span{
-    background-color: var(--primary);
-}
-
-.franquicias__texto{
-    background-color: var(--primary);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.franquicias__texto p {
-    font-size: var(--text-base);
-    font-weight: 500;
-    color:var(--alternative);
-}
-
-.franquicias__texto h3 {
-    font-size: var(--text-base);
-    font-weight: 600;
-    color: var(--alternative);
-}
-
-.franquicias__texto img {
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-}
-
-.franquicias__contacto{
-    font-size: var(--text-base);
-}
-
-.franquicias__imagen1 img{
-    width: 100%;
-    height: 100%;
-}
-
-.franquicias__imagen2{
-    width: 100%;
-    height: 20vh;
-    font-size: var(--text-medium);
-    color: var(--alternative);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.f__img{
-    width: 100%;
-    height: 33.33%;
-}
-
-.franquicias__locales{
-    background: center url(../img/franquicias2.webp);
-    background-size: cover;
-}
-
-.franquicias__foodtruck{
-    background: center url(../img/franquicias3.webp);
-    background-size: cover;
-}
-
-.franquicias__eventos{
-    background: center url(../img/franquicias4.webp);
-    background-size: cover;
-}
- 
-
-/*FIN FRANQUICIAS*/
-
-
-/*CONTACTO*/
-
-.contacto__imagen{
-    background: center url(../img/contactofondo.webp);
-    background-size: cover;
-    background-position: center center;
-}
-
-.contacto__imagen h2{
-    font-size: var(--text-medium);
-}
-
-.contacto__imagen h2 span{
-    background-color: var(--primary);
-}
-
-.contenedor__formulario{
-    background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    backdrop-filter: blur( 5px );
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    border-radius: 2rem;
-}
-
-.contenedor__formulario label{
-    font-size: var(--text-small);
-    color: var(--alternative);
-}
-
-.contenedor__formulario input,
-.contenedor__formulario textarea{
-    background-color: rgba( 255, 255, 255, 0.25 );
-    resize: none;
-    border: 1px solid rgba( 255, 255, 255, 0.6 ) ;
-    color: var(--alternative);
-    font-size: var(--text-small);
-}
-
-.contenedor__formulario input:focus,
-.contenedor__formulario textarea:focus{
-    background-color: rgba( 255, 255, 255, 0.25);
-    border-color: rgba( 255, 255, 255, 0.8);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba( 255, 255, 255, 0.6 );
-    color: var(--alternative);
-}
-
-.logo__contacto{
-    width: 8rem;
-    height: 8rem;
-    border-radius: 50%;
-    position: absolute;
-    top: -4rem;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0 auto; 
-}
-
-.contactobtn{
-    background-color: var(--primary)
+.footer__links li a i:hover {
+  color: rgb(10, 110, 180);
+  transform: translateY(-1rem);
 }
 
-
-/*FIN CONTACTO*/
-
-
-/*FOOTER*/
-
-.footer__redes--texto{
-    color: var(--alternative);
-    font-size: var(--text-small);
-}
-
-.footer__links li a i{
-    color: var(--alternative);
-    font-size: var(--text-medium);
-    transition: 0.2s ease-in-out;
-}
-
-.footer__links li a i:hover{
-    color: var(--primary);
-    transform: translateY(-1rem);
+.footer__logo {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
 }
 
-.footer__logo{
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
+.footer__titulo--logo {
+  color: rgb(255, 255, 255);
+  font-size: 1.8em;
 }
-
-.footer__titulo--logo{
-    color: var(--alternative);
-    font-size: var(--text-base);
-}
-
-.footer__titulo--logo span{
-    color: var(--primary);
+.footer__titulo--logo span {
+  color: rgb(10, 110, 180);
 }
 
-.footer__datos{
-    font-size: var(--text-small);
+.footer__datos {
+  font-size: 1.2rem;
 }
 
 .footer p {
-    font-size: var(--text-xsmall);
+  font-size: 1.2rem;
 }
 
-
-/*FIN FOOTER*/
-
-
-
-/*MEDIA QUERIES*/
-
-/*INICIO*/
-
-@media(min-width:768px){
-    .main__texto h2{
-        font-size: var(--text-xlarge);
-    }
-    .main__enlaces a{
-        height: 8rem;
-    }
+@media (min-width: 768px) {
+  .footer__redes--texto {
+    font-size: 1.8em;
+  }
+}
+/* INICIO */
+.main__contenedor {
+  position: relative;
+  height: 100vh;
+}
+.main__contenedor::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-
-/*NOSOTROS*/
-
-@media(min-width:768px){
-    .nosotros__texto h1{
-        font-size: var(--text-large);
-    }
-    .carousel{
-        width: 80vw;
-        margin: 0 auto;
-    }
-    .carousel-item{
-        width: 100%;
-        height: 70vh;
-      }
+.main__texto {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  gap: 3rem;
+}
+.main__texto h2 {
+  font-size: 5em;
+  font-weight: 500;
+  padding-left: 1rem;
+}
+.main__texto h2 span {
+  background-color: rgb(10, 110, 180);
+}
+.main__texto button a {
+  color: rgb(255, 255, 255);
+  font-size: 1.8em;
 }
 
-
-/*MENU*/
-
-@media(min-width:768px){
-    .menu__filtro p{
-        font-size: var(--text-medium);
-    }
-    .menu__grid{
-        width: 80%;
-        grid-template-columns: repeat(6,1fr);
-        grid-template-rows: repeat(3, 10rem);
-    }
-    .menu__grid--combos{
-        grid-column: span 2;
-        grid-row: span 3;
-    }
-    .menu__fondo section h2{
-        font-size: var(--text-large);
-    }
-    .menu__adicionales ul{
-        height: 33rem;
-    }
-    .menu__adicionales ul li {
-        font-size: var(--text-base);
-    }
+video {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-/*FRANQUICIAS*/
-@media(min-width:576px){
-    .franquicias__imagen2{
-        height: 100%;
-    }
+.main__enlaces a {
+  height: 6rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+.main__enlaces a:hover {
+  transform: scale(1.2);
+  border-radius: 2rem;
+}
+.main__enlaces a p {
+  color: rgb(255, 255, 255);
+  font-size: 1.8em;
+  margin-bottom: 0;
 }
 
-@media(min-width:768px){
-    .franquicias__banner1 h2{
-        font-size: var(--text-large);
-    }
-    .franquicias__texto p{
-        font-size: var(--text-medium);
-    }
-    .franquicias__texto h3{
-        font-size: var(--text-large);
-    }
-    .franquicias__texto img{
-        width: 14rem;
-        height: 14rem;
-    }
-    .franquicias__contacto{
-        font-size: var(--text-medium);
-    }
-    .franquicias__imagen2{
-        font-size: var(--text-large);
-    }
+.main__nosotros {
+  background: center url(../img/nosotros1.webp);
+  background-size: cover;
 }
 
-/*CONTACTO*/
-@media(min-width:768px){
-    .contacto__imagen h2{
-        font-size: var(--text-large);
-    }
+.main__menu {
+  background: bottom url(../img/menu1.png);
+  background-size: cover;
 }
 
-/*FOOTER*/
-
-@media(min-width:768px){
-    .footer__redes--texto{
-        font-size: var(--text-base);
-    }
+.main__franquicias {
+  background: center url(../img/franquicias1.webp);
+  background-size: cover;
 }
+
+.main__contacto {
+  background: center url(../img/contactofondo.webp);
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .main__texto h2 {
+    font-size: 7em;
+  }
+  .main__enlaces a {
+    height: 8rem;
+  }
+}
+/* NOSOTROS */
+.nosotros__banner1 {
+  background: center fixed url(../img/nosotros1.webp);
+  background-size: cover;
+}
+.nosotros__banner1 h2 {
+  font-size: 5em;
+  font-weight: 500;
+  text-align: center;
+}
+.nosotros__banner1 h2 span {
+  background-color: rgb(250, 200, 0);
+}
+
+.nosotros__texto {
+  background-color: rgb(250, 200, 0);
+}
+.nosotros__texto p {
+  font-size: 1.8em;
+}
+.nosotros__texto h1 {
+  font-size: 3em;
+  font-weight: 600;
+}
+.nosotros__texto h3 {
+  font-size: 3em;
+  font-weight: 600;
+}
+
+.logo {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  margin: 2.5rem;
+}
+
+.carousel-item {
+  width: 100%;
+  height: 50vh;
+}
+
+.carousel-inner .carousel-item img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  height: 4rem;
+  width: 4rem;
+}
+
+.nosotros__banner2 {
+  background: center fixed url(../img/nosotros2.webp);
+  background-size: cover;
+}
+.nosotros__banner2 h2 {
+  font-size: 5em;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.nosotros__info {
+  background-color: rgb(250, 200, 0);
+}
+
+.nosotros__banner3 {
+  background: center fixed url(../img/nosotros3.webp);
+  background-size: cover;
+}
+.nosotros__banner3 button a {
+  color: rgb(255, 255, 255);
+  font-size: 1.8em;
+}
+
+@media (min-width: 768px) {
+  .nosotros__texto h1 {
+    font-size: 5em;
+  }
+  .carousel {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .carousel-item {
+    width: 100%;
+    height: 70vh;
+  }
+}
+/* MENU */
+.menu__banner1 {
+  background: center fixed url(../img/menu1.png);
+  background-size: cover;
+}
+.menu__banner1 h2 {
+  font-size: 5em;
+  font-weight: 500;
+  text-align: center;
+}
+.menu__banner1 h2 span {
+  background-color: rgb(10, 110, 180);
+}
+
+.menu__filtro {
+  background-color: rgb(10, 110, 180);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+.menu__filtro p {
+  font-size: 1.8em;
+  color: rgb(255, 255, 255);
+}
+
+#backToTopBtn {
+  font-size: 1.8em;
+  color: rgb(255, 255, 255);
+  background-color: rgb(250, 200, 0);
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 9;
+}
+#backToTopBtn i {
+  width: 3.2rem;
+  height: 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+.menu__grid {
+  width: 100%;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 10rem);
+  gap: 1rem;
+}
+.menu__grid a {
+  width: 100%;
+  height: 100%;
+  color: rgb(255, 255, 255);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__grid--combos {
+  background-image: url(../img/combos1.webp);
+  background-size: cover;
+  background-position: center;
+  grid-column: span 4;
+  font-size: 3em;
+}
+
+.menu__grid--burgers {
+  background-image: url(../img/lacasita14.webp);
+  background-size: cover;
+  background-position: center;
+  grid-column: span 4;
+  font-size: 3em;
+}
+
+.menu__grid--especiales {
+  background-image: url(../img/especiales1.webp);
+  background-size: cover;
+  background-position: center;
+  grid-column: span 4;
+  font-size: 3em;
+}
+
+.menu__grid--bebidas {
+  background-image: url(../img/bebidas1.webp);
+  background-size: cover;
+  background-position: center;
+  font-size: 1.8em;
+}
+
+.menu__grid--postres {
+  background-image: url(../img/postres1.webp);
+  background-size: cover;
+  background-position: center;
+  font-size: 1.8em;
+}
+
+.menu__grid--extras {
+  background-image: url(../img/extras1.jpg);
+  background-size: cover;
+  background-position: center;
+  font-size: 1.8em;
+}
+
+.menu__grid--veggie {
+  background-image: url(../img/veggie1.webp);
+  background-size: cover;
+  background-position: center;
+  font-size: 1.8em;
+}
+
+.menu__fondo {
+  background-color: rgb(10, 110, 180);
+}
+.menu__fondo section h2 {
+  font-size: 3em;
+  color: rgb(255, 255, 255);
+}
+
+.menu__nota {
+  width: 80%;
+  margin: auto;
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+  border: solid 1px rgb(255, 255, 255);
+}
+
+.menu__adicionales ul {
+  border: solid 1px rgb(255, 255, 255);
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.menu__adicionales ul li {
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+}
+
+@media (min-width: 768px) {
+  .menu__filtro p {
+    font-size: 3em;
+  }
+  .menu__grid {
+    width: 80%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 10rem);
+  }
+  .menu__grid--combos {
+    grid-column: span 2;
+    grid-row: span 3;
+  }
+  .menu__fondo section h2 {
+    font-size: 5em;
+  }
+  .menu__adicionales ul {
+    height: 33rem;
+  }
+  .menu__adicionales ul li {
+    font-size: 1.8em;
+  }
+}
+/* FRANQUICIAS */
+.franquicias__banner1 {
+  background: center fixed url(../img/franquicias1.webp);
+  background-size: cover;
+}
+.franquicias__banner1 h2 {
+  font-size: 3em;
+  text-align: center;
+  font-weight: 500;
+}
+.franquicias__banner1 h2 span {
+  background-color: rgb(10, 110, 180);
+}
+
+.franquicias__texto {
+  background-color: rgb(10, 110, 180);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.franquicias__texto p {
+  font-size: 1.8em;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+.franquicias__texto h3 {
+  font-size: 1.8em;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+.franquicias__texto img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+}
+
+.franquicias__contacto {
+  font-size: 1.8em;
+}
+
+.franquicias__imagen1 img {
+  width: 100%;
+  height: 100%;
+}
+
+.franquicias__imagen2 {
+  width: 100%;
+  height: 20vh;
+  font-size: 3em;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.f__img {
+  width: 100%;
+  height: 33.33%;
+}
+
+.franquicias__locales {
+  background: center url(../img/franquicias2.webp);
+  background-size: cover;
+}
+
+.franquicias__foodtruck {
+  background: center url(../img/franquicias3.webp);
+  background-size: cover;
+}
+
+.franquicias__eventos {
+  background: center url(../img/franquicias4.webp);
+  background-size: cover;
+}
+
+@media (min-width: 576px) {
+  .franquicias__imagen2 {
+    height: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .franquicias__banner1 h2 {
+    font-size: 5em;
+  }
+  .franquicias__texto p {
+    font-size: 3em;
+  }
+  .franquicias__texto h3 {
+    font-size: 5em;
+  }
+  .franquicias__texto img {
+    width: 14rem;
+    height: 14rem;
+  }
+  .franquicias__contacto {
+    font-size: 3em;
+  }
+  .franquicias__imagen2 {
+    font-size: 5em;
+  }
+}
+/* CONTACTO */
+.contacto__imagen {
+  background: center url(../img/contactofondo.webp);
+  background-size: cover;
+  background-position: center center;
+}
+.contacto__imagen h2 {
+  font-size: 3em;
+}
+.contacto__imagen h2 span {
+  background-color: rgb(10, 110, 180);
+}
+
+.contenedor__formulario {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 2rem;
+}
+.contenedor__formulario label {
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+}
+
+.contenedor__formulario input, .contenedor__formulario textarea {
+  background-color: rgba(255, 255, 255, 0.25);
+  resize: none;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+}
+.contenedor__formulario input:focus, .contenedor__formulario textarea:focus {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 255, 255, 0.6);
+  color: rgb(255, 255, 255);
+}
+
+.logo__contacto {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  position: absolute;
+  top: -4rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+}
+
+.contactobtn {
+  background-color: rgb(10, 110, 180);
+}
+
+@media (min-width: 768px) {
+  .contacto__imagen h2 {
+    font-size: 5em;
+  }
+}/*# sourceMappingURL=styles.css.map */

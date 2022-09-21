@@ -1,0 +1,110 @@
+/* FRANQUICIAS */
+.franquicias__banner1{
+    background: center fixed url(../img/franquicias1.webp);
+    background-size: cover;
+    h2{
+        font-size: $text-medium;
+        text-align: center;
+        font-weight: 500;
+        span{
+            background-color: $primary;
+        }
+    }
+}
+
+.franquicias__texto{
+    background-color: $primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    p{
+        font-size: $text-base;
+        font-weight: 500;
+        color: $alternative;
+    }
+    h3{
+        font-size: $text-base;
+        font-weight: 600;
+        color: $alternative;
+    }
+    img{
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+    }
+}
+
+.franquicias__contacto{
+    font-size: $text-base;
+}
+
+.franquicias__imagen1{
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.franquicias__imagen2{
+    width: 100%;
+    height: 20vh;
+    font-size: $text-medium;
+    color: $alternative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f__img{
+    width: 100%;
+    height: 33.33%;
+}
+
+.franquicias__locales{
+    background: center url(../img/franquicias2.webp);
+    background-size: cover;
+}
+
+.franquicias__foodtruck{
+    background: center url(../img/franquicias3.webp);
+    background-size: cover;
+}
+
+.franquicias__eventos{
+    background: center url(../img/franquicias4.webp);
+    background-size: cover;
+}
+
+@media(min-width:576px){
+    .franquicias__imagen2{
+        height: 100%;
+    }
+}
+
+@media(min-width:768px){
+    .franquicias__banner1{
+        h2{
+            font-size: $text-large;
+        }
+    } 
+    .franquicias__texto{
+        p{
+            font-size: $text-medium;
+        }
+        h3{
+            font-size: $text-large;
+        }
+        img{
+            width: 14rem;
+            height: 14rem;
+        }
+    } 
+   
+    .franquicias__contacto{
+        font-size: $text-medium;
+    }
+    .franquicias__imagen2{
+        font-size: $text-large;
+    }
+}

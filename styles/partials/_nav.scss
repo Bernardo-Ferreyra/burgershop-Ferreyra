@@ -1,0 +1,43 @@
+/* NAVBAR */
+nav{
+    background-color: $primary;
+    .navegacion__logo{
+        width: 18rem;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        cursor: pointer;
+        img{
+            height: 3.8rem;
+            width: 3.8rem;
+            border-radius: 50%;
+        }
+        h1{
+            font-size: $text-base;
+            color: $alternative;
+            font-weight: 400;
+            padding-top: $spacing-xsmall;
+        }
+    }
+}
+
+.nav-link{
+    color: $alternative;
+    cursor: pointer;
+    font-size: $text-base;
+    &:hover{
+        transform: scale(1.2);
+        transition: 0.2s ease;
+        color: $alternative;
+    }
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.7);
+} 
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+

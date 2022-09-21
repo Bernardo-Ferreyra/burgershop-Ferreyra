@@ -1,0 +1,28 @@
+/*font*/
+@font-face {
+    font-family: Gloss_And_Bloom ;
+    src: url(../fonts/Gloss_And_Bloom.ttf);
+}     
+
+/* Colores */
+$primary: rgb(10, 110, 180);
+$secondary: rgb(250, 200, 0);
+$alternative: rgb(255 ,255 ,255);
+$text-color: rgb(10, 10 , 10);
+
+/* Spacings */
+$spacing-large: 5rem;
+$spacing-medium: 2.5rem;
+$spacing-small: 2rem;
+$spacing-xsmall: 1rem;
+
+/* Font-family */
+$font-title: 'Gloss_And_Bloom';
+$font-paragraph: 'Arima Madurai';
+
+/* Font-Sizes */
+$text-xlarge: 7em;
+$text-large: 5em;
+$text-medium: 3em;
+$text-base: 1.8em;
+$text-small: 1.2rem;
