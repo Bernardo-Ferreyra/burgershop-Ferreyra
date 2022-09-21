@@ -1,0 +1,96 @@
+/* INICIO */
+.main__contenedor{
+    position: relative;
+    height: 100vh;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.main__texto {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    gap: 3rem;
+    h2{
+        font-size: $text-large;
+        font-weight: 500;
+        padding-left: 1rem;
+        span{
+            background-color: $primary;
+        }
+    }
+    button{
+        a{
+            color: $alternative;
+            font-size: $text-base;
+        }
+    }
+}
+
+video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.main__enlaces {
+    a{
+        height: 6rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.3s ease-in;
+        &:hover{
+            transform: scale(1.2);
+            border-radius: 2rem;
+        }
+        p{
+            color: $alternative;
+            font-size: $text-base;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.main__nosotros{
+    background: center url(../img/nosotros1.webp);
+    background-size: cover;
+}
+
+.main__menu{
+    background: bottom url(../img/menu1.png);
+    background-size: cover;
+}
+
+.main__franquicias{
+    background: center url(../img/franquicias1.webp);
+    background-size: cover;
+}
+
+.main__contacto{
+    background: center url(../img/contactofondo.webp);
+    background-size: cover;
+}
+
+@media(min-width:768px){
+    .main__texto h2{
+        font-size: $text-xlarge;
+    }
+    .main__enlaces a{
+        height: 8rem;
+    }
+}

@@ -1,0 +1,43 @@
+/* FOOTER */
+.footer__redes--texto{
+    color: $alternative;
+    font-size: $text-small;
+}
+
+.footer__links li a i{
+    color: $alternative;
+    font-size: $text-medium;
+    transition: 0.2s ease-in-out;
+    &:hover{
+        color: $primary;
+        transform: translateY(-1rem);
+    }
+}
+
+.footer__logo{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+.footer__titulo--logo{
+    color: $alternative;
+    font-size: $text-base;
+    span{
+        color: $primary;
+    }
+}
+
+.footer__datos{
+    font-size: $text-small;
+}
+
+.footer p {
+    font-size: $text-small;
+}
+
+@media(min-width:768px){
+    .footer__redes--texto{
+        font-size: $text-base;
+    }
+}
