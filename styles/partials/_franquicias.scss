@@ -1,42 +1,45 @@
 /* FRANQUICIAS */
 .franquicias__banner1{
+    @extend %banner;
     background: center fixed url(../img/franquicias1.webp);
     background-size: cover;
     h2{
-        font-size: $text-medium;
+        font-size: map-get($font-sizing, text-medium);
         text-align: center;
         font-weight: 500;
         span{
-            background-color: $primary;
+            background-color: map-get($colors, primary);
         }
     }
 }
 
 .franquicias__texto{
-    background-color: $primary;
+    background-color: map-get($colors, primary);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     p{
-        font-size: $text-base;
+        font-size: map-get($font-sizing, text-base);
         font-weight: 500;
-        color: $alternative;
+        color: map-get($colors, alternative);
     }
     h3{
-        font-size: $text-base;
+        font-size: map-get($font-sizing, text-base);
         font-weight: 600;
-        color: $alternative;
+        color: map-get($colors, alternative);
     }
     img{
         width: 10rem;
         height: 10rem;
         border-radius: 50%;
     }
-}
-
-.franquicias__contacto{
-    font-size: $text-base;
+    button{
+        @extend %btnCustom;
+        a{
+            font-size: map-get($font-sizing, text-base);
+        }
+    }
 }
 
 .franquicias__imagen1{
@@ -49,8 +52,8 @@
 .franquicias__imagen2{
     width: 100%;
     height: 20vh;
-    font-size: $text-medium;
-    color: $alternative;
+    font-size: map-get($font-sizing, text-medium);
+    color: map-get($colors, alternative);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,15 +88,15 @@
 @media(min-width:768px){
     .franquicias__banner1{
         h2{
-            font-size: $text-large;
+            font-size: map-get($font-sizing, text-large);
         }
     } 
     .franquicias__texto{
         p{
-            font-size: $text-medium;
+            font-size: map-get($font-sizing, text-medium);
         }
         h3{
-            font-size: $text-large;
+            font-size: map-get($font-sizing, text-large);
         }
         img{
             width: 14rem;
@@ -102,9 +105,9 @@
     } 
    
     .franquicias__contacto{
-        font-size: $text-medium;
+        font-size: map-get($font-sizing, text-medium);
     }
     .franquicias__imagen2{
-        font-size: $text-large;
+        font-size: map-get($font-sizing, text-large);
     }
 }

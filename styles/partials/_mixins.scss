@@ -1,0 +1,20 @@
+
+
+@mixin main__enlaces ($backgd) {
+    height: 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+    color: map-get($colors, alternative);
+    font-size: map-get($font-sizing, text-base);
+    background: $backgd;
+    background-size: cover;
+    &:hover{
+        transform: scale(1.2);
+        border-radius: 2rem;
+        color: map-get($colors, alternative);
+    }
+}

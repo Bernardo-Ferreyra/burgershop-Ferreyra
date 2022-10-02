@@ -1,6 +1,6 @@
 /* NAVBAR */
 nav{
-    background-color: $primary;
+    background-color: map-get($colors, primary);
     .navegacion__logo{
         width: 18rem;
         height: 5rem;
@@ -14,22 +14,22 @@ nav{
             border-radius: 50%;
         }
         h1{
-            font-size: $text-base;
-            color: $alternative;
+            font-size: map-get($font-sizing, text-base);
+            color: map-get($colors, alternative);
             font-weight: 400;
-            padding-top: $spacing-xsmall;
+            padding-top: map-get($spacing, spacing-xsmall);
         }
     }
 }
 
 .nav-link{
-    color: $alternative;
+    color: map-get($colors, alternative);
     cursor: pointer;
-    font-size: $text-base;
+    font-size: map-get($font-sizing, text-base);
     &:hover{
         transform: scale(1.2);
         transition: 0.2s ease;
-        color: $alternative;
+        color: map-get($colors, alternative);
     }
 }
 

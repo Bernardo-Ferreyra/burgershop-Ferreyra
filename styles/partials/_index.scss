@@ -24,17 +24,17 @@
     z-index: 3;
     gap: 3rem;
     h2{
-        font-size: $text-large;
+        font-size: map-get($font-sizing, text-large);
         font-weight: 500;
         padding-left: 1rem;
         span{
-            background-color: $primary;
+            background-color: map-get($colors, primary);
         }
     }
     button{
+        @extend %btnCustom;
         a{
-            color: $alternative;
-            font-size: $text-base;
+            font-size: map-get($font-sizing, text-base);
         }
     }
 }
@@ -45,52 +45,27 @@ video {
     object-fit: cover;
 }
 
-.main__enlaces {
-    a{
-        height: 6rem;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        transition: 0.3s ease-in;
-        &:hover{
-            transform: scale(1.2);
-            border-radius: 2rem;
-        }
-        p{
-            color: $alternative;
-            font-size: $text-base;
-            margin-bottom: 0;
-        }
-    }
-}
-
 .main__nosotros{
-    background: center url(../img/nosotros1.webp);
-    background-size: cover;
+    @include main__enlaces($backgd: center url(../img/nosotros1.webp));
 }
 
 .main__menu{
-    background: bottom url(../img/menu1.png);
-    background-size: cover;
+    @include main__enlaces($backgd: bottom url(../img/menu1.png));
 }
 
 .main__franquicias{
-    background: center url(../img/franquicias1.webp);
-    background-size: cover;
+    @include main__enlaces($backgd: center url(../img/franquicias1.webp));
 }
 
 .main__contacto{
-    background: center url(../img/contactofondo.webp);
-    background-size: cover;
+    @include main__enlaces($backgd: center url(../img/contactofondo.webp));
 }
 
 @media(min-width:768px){
     .main__texto h2{
-        font-size: $text-xlarge;
+        font-size: map-get($font-sizing, text-large);
     }
-    .main__enlaces a{
+    .main__links aside a{
         height: 8rem;
     }
 }

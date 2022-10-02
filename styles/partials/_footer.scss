@@ -1,15 +1,15 @@
 /* FOOTER */
 .footer__redes--texto{
-    color: $alternative;
-    font-size: $text-small;
+    color: map-get($colors, alternative);
+    font-size: map-get($font-sizing, text-small);
 }
 
 .footer__links li a i{
-    color: $alternative;
-    font-size: $text-medium;
+    color: map-get($colors, alternative);
+    font-size: map-get($font-sizing, text-medium);
     transition: 0.2s ease-in-out;
     &:hover{
-        color: $primary;
+        color: map-get($colors, primary);
         transform: translateY(-1rem);
     }
 }
@@ -21,23 +21,23 @@
 }
 
 .footer__titulo--logo{
-    color: $alternative;
-    font-size: $text-base;
+    color: map-get($colors, alternative);
+    font-size: map-get($font-sizing, text-base);
     span{
-        color: $primary;
+        color: map-get($colors, primary);
     }
 }
 
 .footer__datos{
-    font-size: $text-small;
+    font-size: map-get($font-sizing, text-small);
 }
 
 .footer p {
-    font-size: $text-small;
+    font-size: map-get($font-sizing, text-small);
 }
 
 @media(min-width:768px){
     .footer__redes--texto{
-        font-size: $text-base;
+        font-size: map-get($font-sizing, text-base);
     }
 }

@@ -1,28 +1,29 @@
 /* NOSOTROS */
 .nosotros__banner1{
+    @extend %banner;
     background: center fixed url(../img/nosotros1.webp);
     background-size: cover;
     h2{
-        font-size: $text-large;
+        font-size: map-get($font-sizing, text-large);
         font-weight: 500;
         text-align: center;
         span{
-            background-color: $secondary;
+            background-color: map-get($colors, secondary);
         }  
     }
 }
 
 .nosotros__texto{
-    background-color: $secondary;
+    background-color: map-get($colors, secondary);
     p{
-        font-size: $text-base;
+        font-size: map-get($font-sizing, text-base);
     }
     h1{
-        font-size: $text-medium;
+        font-size: map-get($font-sizing, text-medium);
         font-weight: 600;
     }
     h3{
-        font-size: $text-medium;
+        font-size: map-get($font-sizing, text-medium);
         font-weight: 600;
     }
 }
@@ -31,7 +32,7 @@
     width: 7rem;
     height: 7rem;
     border-radius: 50%;
-    margin: $spacing-medium;
+    margin: map-get($spacing, spacing-medium);
 }
 
 .carousel-item{
@@ -50,34 +51,37 @@
 }
 
 .nosotros__banner2{
+    @extend %banner;
     background: center fixed url(../img/nosotros2.webp);
     background-size: cover;
     h2{
-        font-size: $text-large;
+        font-size: map-get($font-sizing, text-large);
         font-weight: 500;
-        color: $alternative;
+        color: map-get($colors, alternative);
         text-align: center;
     }
 }
 
 .nosotros__info{
-    background-color: $secondary;
+    background-color: map-get($colors, secondary);
 }
 
 .nosotros__banner3{
+    @extend %banner;
     background: center fixed url(../img/nosotros3.webp);
     background-size: cover;
     button{
+        @extend %btnCustom;
         a{
-            color: $alternative;
-            font-size: $text-base;
+            color: map-get($colors, alternative);
+            font-size: map-get($font-sizing, text-base);
         }
     }
 }
 
 @media(min-width:768px){
     .nosotros__texto h1{
-        font-size: $text-large;
+        font-size: map-get($font-sizing, text-large);
     }
     .carousel{
         width: 80vw;
