@@ -39,10 +39,17 @@
     }
 }
 
-video {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
+.main__contenido{
+    picture{
+        img{
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+    }
+    video{
+        display: none;
+    }
 }
 
 .main__nosotros{
@@ -50,7 +57,7 @@ video {
 }
 
 .main__menu{
-    @include main__enlaces($backgd: bottom url(../img/menu1.png));
+    @include main__enlaces($backgd: bottom url(../img/menu1.webp));
 }
 
 .main__franquicias{
@@ -62,6 +69,17 @@ video {
 }
 
 @media(min-width:768px){
+    .main__contenido{
+        picture{
+            display: none;
+        }
+        video{
+            display: inline-block;
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+    }
     .main__texto h2{
         font-size: map-get($font-sizing, text-large);
     }

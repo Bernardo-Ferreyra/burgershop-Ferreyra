@@ -11,7 +11,6 @@ html {
 }
 
 /* GLOBALES */
-/*font*/
 @font-face {
   font-family: Gloss_And_Bloom;
   src: url(../fonts/Gloss_And_Bloom.ttf);
@@ -134,10 +133,10 @@ img {
 }
 
 /* NAVBAR */
-nav {
+.nav__container {
   background-color: rgb(10, 110, 180);
 }
-nav .navegacion__logo {
+.nav__container .navegacion__logo {
   width: 18rem;
   height: 5rem;
   display: flex;
@@ -145,12 +144,12 @@ nav .navegacion__logo {
   justify-content: space-around;
   cursor: pointer;
 }
-nav .navegacion__logo img {
+.nav__container .navegacion__logo img {
   height: 3.8rem;
   width: 3.8rem;
   border-radius: 50%;
 }
-nav .navegacion__logo h1 {
+.nav__container .navegacion__logo h1 {
   font-size: 1.8em;
   color: rgb(255, 255, 255);
   font-weight: 400;
@@ -257,11 +256,14 @@ nav .navegacion__logo h1 {
   font-size: 1.8em;
 }
 
-video {
+.main__contenido picture img {
   width: 100%;
   height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.main__contenido video {
+  display: none;
 }
 
 .main__nosotros {
@@ -271,16 +273,38 @@ video {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: 0.3s ease-in;
   color: rgb(255, 255, 255);
   font-size: 1.8em;
+  font-weight: 500;
   background: center url(../img/nosotros1.webp);
   background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.main__nosotros span {
+  position: relative;
+  z-index: 2;
+  transition: 0.3s ease all;
+}
+.main__nosotros::after {
+  content: "";
+  width: calc(100% + 8rem);
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: calc(-100% - 8rem);
+  border-bottom: 8rem solid rgba(0, 0, 0, 0.5);
+  border-right: 8rem solid transparent;
+  transition: 0.3s ease-in-out all;
 }
 .main__nosotros:hover {
-  transform: scale(1.2);
-  border-radius: 2rem;
   color: rgb(255, 255, 255);
+}
+.main__nosotros:hover span {
+  transform: scale(1.2);
+}
+.main__nosotros:hover::after {
+  left: 0;
 }
 
 .main__menu {
@@ -290,16 +314,38 @@ video {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: 0.3s ease-in;
   color: rgb(255, 255, 255);
   font-size: 1.8em;
-  background: bottom url(../img/menu1.png);
+  font-weight: 500;
+  background: bottom url(../img/menu1.webp);
   background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.main__menu span {
+  position: relative;
+  z-index: 2;
+  transition: 0.3s ease all;
+}
+.main__menu::after {
+  content: "";
+  width: calc(100% + 8rem);
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: calc(-100% - 8rem);
+  border-bottom: 8rem solid rgba(0, 0, 0, 0.5);
+  border-right: 8rem solid transparent;
+  transition: 0.3s ease-in-out all;
 }
 .main__menu:hover {
-  transform: scale(1.2);
-  border-radius: 2rem;
   color: rgb(255, 255, 255);
+}
+.main__menu:hover span {
+  transform: scale(1.2);
+}
+.main__menu:hover::after {
+  left: 0;
 }
 
 .main__franquicias {
@@ -309,16 +355,38 @@ video {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: 0.3s ease-in;
   color: rgb(255, 255, 255);
   font-size: 1.8em;
+  font-weight: 500;
   background: center url(../img/franquicias1.webp);
   background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.main__franquicias span {
+  position: relative;
+  z-index: 2;
+  transition: 0.3s ease all;
+}
+.main__franquicias::after {
+  content: "";
+  width: calc(100% + 8rem);
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: calc(-100% - 8rem);
+  border-bottom: 8rem solid rgba(0, 0, 0, 0.5);
+  border-right: 8rem solid transparent;
+  transition: 0.3s ease-in-out all;
 }
 .main__franquicias:hover {
-  transform: scale(1.2);
-  border-radius: 2rem;
   color: rgb(255, 255, 255);
+}
+.main__franquicias:hover span {
+  transform: scale(1.2);
+}
+.main__franquicias:hover::after {
+  left: 0;
 }
 
 .main__contacto {
@@ -328,19 +396,51 @@ video {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: 0.3s ease-in;
   color: rgb(255, 255, 255);
   font-size: 1.8em;
+  font-weight: 500;
   background: center url(../img/contactofondo.webp);
   background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.main__contacto span {
+  position: relative;
+  z-index: 2;
+  transition: 0.3s ease all;
+}
+.main__contacto::after {
+  content: "";
+  width: calc(100% + 8rem);
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: calc(-100% - 8rem);
+  border-bottom: 8rem solid rgba(0, 0, 0, 0.5);
+  border-right: 8rem solid transparent;
+  transition: 0.3s ease-in-out all;
 }
 .main__contacto:hover {
-  transform: scale(1.2);
-  border-radius: 2rem;
   color: rgb(255, 255, 255);
+}
+.main__contacto:hover span {
+  transform: scale(1.2);
+}
+.main__contacto:hover::after {
+  left: 0;
 }
 
 @media (min-width: 768px) {
+  .main__contenido picture {
+    display: none;
+  }
+  .main__contenido video {
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   .main__texto h2 {
     font-size: 5em;
   }
@@ -372,9 +472,9 @@ video {
   font-size: 3em;
   font-weight: 600;
 }
-.nosotros__texto h3 {
+.nosotros__texto h2 {
   font-size: 3em;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .logo {
@@ -439,7 +539,7 @@ video {
 }
 /* MENU */
 .menu__banner1 {
-  background: center fixed url(../img/menu1.png);
+  background: center fixed url(../img/menu1.webp);
   background-size: cover;
 }
 .menu__banner1 h2 {
@@ -507,6 +607,33 @@ video {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.menu__grid a span {
+  position: relative;
+  z-index: 2;
+  transition: 0.3s ease all;
+}
+.menu__grid a::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: none;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transition: 0.6s ease-in-out all;
+  transform-origin: center;
+}
+.menu__grid a:hover span {
+  color: black;
+}
+.menu__grid a:hover::after {
+  transform: scale(100);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .menu__grid--combos {
@@ -564,7 +691,7 @@ video {
 .menu__fondo {
   background-color: rgb(10, 110, 180);
 }
-.menu__fondo section h2 {
+.menu__fondo article h2 {
   font-size: 3em;
   color: rgb(255, 255, 255);
 }
@@ -602,7 +729,7 @@ video {
     grid-column: span 2;
     grid-row: span 3;
   }
-  .menu__fondo section h2 {
+  .menu__fondo article h2 {
     font-size: 5em;
   }
   .menu__adicionales ul {

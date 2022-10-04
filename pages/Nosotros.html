@@ -26,12 +26,12 @@
 
 <body>
     
-    <main class="container-fluid">
+    <div class="container-fluid">
 
         <!--barra de navegacion-->
-        <section class="row">
-            <section class="col p-0">
-                <nav class="navbar navbar-dark navbar-expand-md py-0">
+        <header class="row">
+            <header class="col p-0">
+                <section class="navbar navbar-dark navbar-expand-md py-0 nav__container">
                     <a href="../index.html" class="navegacion__logo">
                         <img src="../img/logo1.webp" alt="logo">
                         <h1>La casita Azul</h1>
@@ -39,7 +39,7 @@
                     <button class="navbar-toggler custom-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse pe-md-5 pe-sm-0" id="navbarNav">
+                    <nav class="collapse navbar-collapse pe-md-5 pe-sm-0" id="navbarNav">
                         <ul class="navbar-nav w-100 justify-content-end text-center gap-3 gap-sm-4 gap-md-5">
                             <li class="nav-item">
                                 <a class="nav-link" href="../index.html">Inicio</a>
@@ -57,33 +57,33 @@
                                 <a class="nav-link" href="./Contacto.html">Contacto</a>
                             </li>
                         </ul>
-                    </div>
-                </nav>
-            </section>
-        </section>
+                    </nav>
+                </section>
+            </header>
+        </header>
 
         <!-- fin barra de navegacion-->
 
     
         <!--sobre nosotros-->
-        <section class="row">
-            <section class="col p-0">
+        <article class="row">
+            <aside class="col p-0">
                 <div class="nosotros__banner1">
                     <h2 class="animacion__titulo">Nosotros<span></span></h2>
                 </div>
-            </section>
-        </section>
+            </aside>
+        </article>
 
-        <section class="row">
+        <main class="row">
             <section class="col p-0">
-                <main class="nosotros__texto text-center p-5">
+                <article class="nosotros__texto text-center p-5">
                     <p>somos</p>
                     <h1 class="m-4 p-md-4">La casita Azul</h1>
                     <p class="my-5 mx-md-5 px-md-5">Bienvenido! nos dedicamos a hacer de una hamburguesa una experiencia unica! es por eso que trabajamos en este emprendimiento durante tantos años, nos gustan las buguers! sabemos hacerlas! son para vos!
                     </p>
                     <img class="logo" src="../img/logo1.webp" alt="logo la casita azul">
 
-                    <h3 class="text-center m-5">Galeria</h3>
+                    <h2 class="text-center m-5">Galeria</h2>
                     <div id="carouselExampleControls" class="carousel slide mb-5" data-bs-ride="carousel">
                         <div class="carousel-inner">
                           <div class="carousel-item active">
@@ -144,19 +144,19 @@
                           <span class="visually-hidden">Next</span>
                         </button>
                       </div>
-                </main>
+                </article>
             </section>
-        </section>
+        </main>
 
-        <section class="row">
-            <section class="col p-0">
+        <article class="row">
+            <aside class="col p-0">
                 <div class="nosotros__banner2">
                     <h2>Burger Lovers</h2>
                 </div>
-            </section>
-        </section>
+            </aside>
+        </article>
 
-        <section class="row nosotros__info align-items-center">
+        <main class="row nosotros__info align-items-center">
             <section class="col-12 col-md-4 text-center p-0 my-5">
                 <div class="card mx-auto my-5 bg-dark text-white">
                     <img src="../img/nosotroscard1.webp" class="card-img-top" alt="...">
@@ -170,7 +170,7 @@
                 <div class="card mx-auto my-5 bg-dark text-white">
                     <img src="../img/nosotroscard2.webp" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h3 class="card-title mb-5 mt-2">Delivery</h3>
+                      <h3 class="card-title mb-4 mt-2">Delivery</h3>
                       <p class="card-text"> Coghlan <br>Saavedra <br>Nuñez <br> Belgrano <br> Villa urquiza</p>
                     </div>
                 </div>
@@ -185,20 +185,20 @@
                 </div>
 
             </section>
-        </section>
+        </main>
 
-        <section class="row">
-            <section class="col p-0">
+        <article class="row">
+            <aside class="col p-0">
                 <div class="nosotros__banner3">
                     <button><a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/la-casita-azul-burgers-menu" target="_blank">Pedi Ya!</a></button>
                 </div>
-            </section>
-        </section>
+            </aside>
+        </article>
 
         <!--fin sobre nosotros-->
 
         <!--Footer-->
-        <section class="row bg-dark py-2 align-items-center">
+        <footer class="row bg-dark py-2 align-items-center">
             <section class="col-md-4 p-5">
                 <h3 class="footer__redes--texto text-center">Seguinos en nuestras redes sociales!</h3>
                 <ul class="footer__links mt-5 p-0 d-flex justify-content-evenly">
@@ -220,8 +220,10 @@
                 </ul>
             </section>
             <section class="col-md-4 py-5 px-4">
-                <h2 class="footer__titulo--logo text-center">La casita<span>Azul</span></h2>
-                <img class="footer__logo mx-auto d-block" src="../img/logo1.webp" alt="logo">
+                <a href="../index.html">
+                    <h2 class="footer__titulo--logo text-center">La casita<span>Azul</span></h2>
+                    <img class="footer__logo mx-auto d-block" src="../img/logo1.webp" alt="logo">
+                </a>
             </section>
             <section class="col-md-4 p-5 text-secondary text-center">
                 <ul class="footer__datos p-0">
@@ -231,16 +233,16 @@
                     <li>+54 11 6621-8027</li>
                 </ul>
             </section>
-        </section>
-        <section class="row align-items-center p-0 bg-black">
+        </footer>
+        <footer class="row align-items-center p-0 bg-black">
             <section class="col text-center m-4 footer">
                 <p class="text-secondary m-0"><i class="fa-solid fa-copyright"></i> La casita azul , todos los derechos reservados</p>
             </section>
-        </section>
+        </footer>
 
         <!--fin Footer-->   
 
-    </main>
+    </div>
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>

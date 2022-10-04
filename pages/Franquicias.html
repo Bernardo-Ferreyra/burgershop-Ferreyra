@@ -26,12 +26,12 @@
 
 <body>
 
-    <main class="container-fluid">
+    <div class="container-fluid">
     
         <!--barra de navegacion-->
-        <section class="row">
-            <section class="col p-0">
-                <nav class="navbar navbar-dark navbar-expand-md py-0">
+        <header class="row">
+            <header class="col p-0">
+                <section class="navbar navbar-dark navbar-expand-md py-0 nav__container">
                     <a href="../index.html" class="navegacion__logo">
                         <img src="../img/logo1.webp" alt="logo">
                         <h1>La casita Azul</h1>
@@ -39,7 +39,7 @@
                     <button class="navbar-toggler custom-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse pe-md-5 pe-sm-0" id="navbarNav">
+                    <nav class="collapse navbar-collapse pe-md-5 pe-sm-0" id="navbarNav">
                         <ul class="navbar-nav w-100 justify-content-end text-center gap-3 gap-sm-4 gap-md-5">
                             <li class="nav-item">
                                 <a class="nav-link" href="../index.html">Inicio</a>
@@ -57,24 +57,24 @@
                                 <a class="nav-link" href="./Contacto.html">Contacto</a>
                             </li>
                         </ul>
-                    </div>
-                </nav>
-            </section>
-        </section>
+                    </nav>
+                </section>
+            </header>
+        </header>
 
         <!-- fin barra de navegacion-->
 
 
         <!-- Franquicias -->
-        <section class="row">
-            <section class="col p-0">
+        <article class="row">
+            <aside class="col p-0">
                 <div class="franquicias__banner1 banner">
                     <h2 class="animacion__titulo">Trabaja con nosotros<span></span></h2>
                 </div>
-            </section>
-        </section>
+            </aside>
+        </article>
 
-        <section class="row">
+        <main class="row">
             <section class="col p-0 text-center">
                 <article class="franquicias__texto p-5 ">
                     <h3 class="my-5">Se parte de la experiencia!</h3>
@@ -83,15 +83,15 @@
                     <button class="mt-5"><a href="Contacto.html" class="text-white">Contactanos</a></button>
                 </article>
             </section>
-        </section>
+        </main>
 
-        <section class="row p-0">
-            <section class="d-none d-sm-block col-12 col-sm-6 p-0">
+        <article class="row p-0">
+            <aside class="d-none d-sm-block col-12 col-sm-6 p-0">
                 <picture class="franquicias__imagen1">
                     <img src="../img/franquicias5.webp" alt="franquicias imagen">
                 </picture>
-            </section>
-            <section class="col-12 col-sm-6 p-0">
+            </aside>
+            <aside class="col-12 col-sm-6 p-0">
                 <section class="row f__img m-0">
                     <section class="col p-0">
                         <picture class="franquicias__locales franquicias__imagen2">
@@ -113,12 +113,12 @@
                         </picture>
                     </section>
                 </section>
-            </section>
-        </section>
+            </aside>
+        </article>
         <!-- fin Franquicias -->
 
         <!--Footer-->
-        <section class="row bg-dark py-2 align-items-center">
+        <footer class="row bg-dark py-2 align-items-center">
             <section class="col-md-4 p-5">
                 <h3 class="footer__redes--texto text-center">Seguinos en nuestras redes sociales!</h3>
                 <ul class="footer__links mt-5 p-0 d-flex justify-content-evenly">
@@ -140,8 +140,10 @@
                 </ul>
             </section>
             <section class="col-md-4 py-5 px-4">
-                <h2 class="footer__titulo--logo text-center">La casita<span>Azul</span></h2>
-                <img class="footer__logo mx-auto d-block" src="../img/logo1.webp" alt="logo">
+                <a href="../index.html">
+                    <h2 class="footer__titulo--logo text-center">La casita<span>Azul</span></h2>
+                    <img class="footer__logo mx-auto d-block" src="../img/logo1.webp" alt="logo">
+                </a>
             </section>
             <section class="col-md-4 p-5 text-secondary text-center">
                 <ul class="footer__datos p-0">
@@ -151,16 +153,16 @@
                     <li>+54 11 6621-8027</li>
                 </ul>
             </section>
-        </section>
-        <section class="row align-items-center p-0 bg-black">
+        </footer>
+        <footer class="row align-items-center p-0 bg-black">
             <section class="col text-center m-4 footer">
                 <p class="text-secondary m-0"><i class="fa-solid fa-copyright"></i> La casita azul , todos los derechos reservados</p>
             </section>
-        </section>
+        </footer>
 
         <!--fin Footer-->
 
-    </main>
+    </div>
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
